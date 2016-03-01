@@ -31,5 +31,5 @@ Sprint 1
 - Research how to create a database for Acyclic graph for Skill dependencies
 - Design class overview (MVC)
 - Web page to create a user profile and add skills to user. 
-- Add necessart test cases
+- Add necessary test cases
 
