@@ -5,5 +5,19 @@
   <%= @user.name %>
 </p>
 
+
+<table>
+
+  <tbody>
+    <% @pskills.each do |skill| %>
+      <tr>
+        <td><%= skill.name %> said:</td>
+        <td><%= skill.category %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
