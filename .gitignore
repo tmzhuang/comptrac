@@ -11,6 +11,5 @@
 /log/*
 !/log/.keep
 /tmp
-Vagrantfile
 /.vagrant
 package.box
