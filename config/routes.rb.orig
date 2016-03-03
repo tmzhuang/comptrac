@@ -2,12 +2,16 @@ Rails.application.routes.draw do
   resources :user_skills
   resources :skills
   resources :users
+<<<<<<< HEAD
+=======
+  get 'welcome/index'
+>>>>>>> a93707c65cd078c251743670c118f3c214130493
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'user#index'
+  root 'user3#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
