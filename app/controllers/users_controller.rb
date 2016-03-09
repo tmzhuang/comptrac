@@ -10,12 +10,16 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @pskills = @user.skills
+    @skills = @user.skills
   end
 
   # GET /users/new
   def new
     @user = User.new
+  end
+
+  # GET /users/add_skill
+  def add_skills
   end
 
   # GET /users/1/edit
@@ -34,7 +38,7 @@ class UsersController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+     end
     end
   end
 
