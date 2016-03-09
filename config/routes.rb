@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  scope :users, :controller => :users do
+    get ':id/add_skills' => :add_skills, as: :add_skills
+  end
   resources :user_skills
   resources :skills
   resources :users
@@ -8,6 +11,8 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'users#index'
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
