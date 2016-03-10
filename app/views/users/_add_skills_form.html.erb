@@ -1,7 +1,10 @@
 
 <%= form_for @user do |f| %>
 <%= f.select :skill_ids, Skill.all.collect {|x| [x.name, x.id]}, {}, :multiple => true, :size =>10 %>
-  <%= link_to 'Add Skills', add_powers_path(@user) %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
 <% end %>
 
 
