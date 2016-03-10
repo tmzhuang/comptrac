@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :add_skills, :add_powers]
+ 
   # GET /users
   # GET /users.json
   def index
@@ -20,8 +20,11 @@ class UsersController < ApplicationController
 
   # GET /users/add_skill
   def add_skills
+   # @user.skills << Skill.find(params[:skill_id])
   end
-
+ def add_powers
+    @user.skills << Skill.find(2)
+  end
   # GET /users/1/edit
   def edit
   end

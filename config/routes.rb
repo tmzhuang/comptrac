@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   scope :users, :controller => :users do
     get ':id/add_skills' => :add_skills, as: :add_skills
+    get ':id/add_powers' => :add_powers, as: :add_powers
+
   end
   resources :user_skills
   resources :skills
