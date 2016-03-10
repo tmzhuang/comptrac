@@ -1,10 +1,15 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
   before_action :set_user, only: [:show, :edit, :update, :destroy, :add_skills]
   before_action :set_skills, only: [:show, :edit, :update, :destroy, :add_skills]
   before_action :set_all_skills, only: [:new, :add_skills, :edit]
   before_action :set_user_skills, only: [:new, :add_skills, :edit]
   prepend_before_action :new_user, only: [:new]
 
+=======
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :add_powers, :add_skills]
+ 
+>>>>>>> origin/milestone-1
   # GET /users
   # GET /users.json
   def index
@@ -55,11 +60,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
-    params[:user][:skill_ids].each do |id|
-      if !id.empty?
-        @user.skills << Skill.find(id)
-      end
-    end
+     @user.skills << Skill.find(params[:user][:skill_ids][1])
    
     respond_to do |format|
       if @user.update(user_params)
