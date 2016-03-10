@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :add_skills]
+  before_action :set_skills, only: [:show, :edit, :update, :destroy, :add_skills]
 
   # GET /users
   # GET /users.json
@@ -10,30 +11,37 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @user = User.find(params[:id])
-    @skills = @user.skills
-  end
-
-  def skills
   end
 
   # GET /users/new
   def new
     @user = User.new
+
+    @all_skills = Skill.all
+    @user_skills = @user.user_skills.build
   end
 
   # GET /users/add_skill
   def add_skills
+    @all_skills = Skill.all
+    @user_skills = @user.user_skills.build
   end
 
   # GET /users/1/edit
   def edit
+    @all_skills = Skill.all
+    @user_skills = @user.user_skills.build
   end
 
   # POST /users
   # POST /users.json
   def create
     @user = User.new(user_params)
+    params[:skills][:ids].each do |skill|
+      if !skill.empty?
+        @user.user_skills.build(:skill_id => skill)
+      end
+    end
 
     respond_to do |format|
       if @user.save
@@ -49,6 +57,11 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+    params[:skills][:ids].each do |skill|
+      if !skill.empty?
+        @user.user_skills.build(:skill_id => skill)
+      end
+    end
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
@@ -74,6 +87,10 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def set_skills
+      @skills = User.find(params[:id]).skills
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
