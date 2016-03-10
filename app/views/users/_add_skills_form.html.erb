@@ -1,14 +1,11 @@
-<%= form_tag(@user, method: "get") do %>
-  <div class="field">
-    <%= select(
-      :skill_id,
-      options_for_select(skills),
-      {},
-      {multiple: true, size: 10})
-    %>
-  </div>
+<%= form_for(@user) do |f| %>
+  <%= fields_for(@user_skills) do |us| %>
+    <div class="field">
+      <%= collection_select(:skills, :ids, @all_skills, :id, :name, {}, { multiple: true }) %>
+    </div>
+  <% end %>
 
   <div class="actions">
-    <%= submit_tag("Add Skills") %>
+    <%= f.submit %>
   </div>
 <% end %>

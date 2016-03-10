@@ -5,8 +5,11 @@
   <%= @user.name %>
 </p>
 
-
-<%= render 'skills' %>
+<div class="skills">
+  <ul class="skills">
+    <%= render @skills %>
+  </ul>
+</div>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
