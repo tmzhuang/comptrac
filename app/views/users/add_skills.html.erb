@@ -1,3 +1,16 @@
-<%= render 'add_skills_form' %>
+<%= form_tag(@user, method: "get") do %>
+  <div class="field">
+    <%= select(
+      :skill_id,
+      options_for_select(@skills),
+      {},
+      {multiple: true, size: 10})
+    %>
+  </div>
+
+  <div class="actions">
+    <%= submit_tag("Add Skills") %>
+  </div>
+<% end %>
 
 <%= link_to 'Back', users_path %>
