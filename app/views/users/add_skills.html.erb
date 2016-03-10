@@ -1,4 +1,9 @@
+<%= form_for @user do |f| %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <%= render partial: 'add_skills_form', locals: { form: f } %>
 
-<%= render partial: 'add_skills_form', locals: { user: @user, all_skills: @all_skills } %>
+<% end %>
 
 <%= link_to 'Back', users_path %>
