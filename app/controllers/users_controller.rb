@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy, :add_skills, :add_powers]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :add_powers, :add_skills]
  
   # GET /users
   # GET /users.json
@@ -23,7 +23,7 @@ class UsersController < ApplicationController
    # @user.skills << Skill.find(params[:skill_id])
   end
  def add_powers
-    @user.skills << Skill.find(2)
+   
   end
   # GET /users/1/edit
   def edit
@@ -48,6 +48,8 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
   def update
+     @user.skills << Skill.find(params[:user][:skill_ids][1])
+   
     respond_to do |format|
       if @user.update(user_params)
         format.html { redirect_to @user, notice: 'User was successfully updated.' }
