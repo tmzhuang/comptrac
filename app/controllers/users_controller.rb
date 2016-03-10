@@ -35,9 +35,9 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
-    params[:skills][:ids].each do |skill|
-      if !skill.empty?
-        @user.user_skills.build(:skill_id => skill)
+    params[:user][:skill_ids].each do |id|
+      if !id.empty?
+        @user.skills << Skill.find(id)
       end
     end
 
