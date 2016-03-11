@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   before_action :set_all_skills, only: [:new, :add_skills, :edit]
   before_action :set_user_skills, only: [:new, :add_skills, :edit]
   prepend_before_action :new_user, only: [:new]
+  before_filter :ensure_signup_complete, only: [:new, :create, :update, :destroy]
 
   # GET /users
   # GET /users.json
