@@ -12,4 +12,5 @@
 !/log/.keep
 /tmp
 /.vagrant
+/lib/dependency_grapher
 package.box
