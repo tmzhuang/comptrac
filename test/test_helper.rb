@@ -8,23 +8,23 @@ class ActionController::TestCase
 end
 
 class ActiveSupport::TestCase
-  
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
-	#@@logger = DependencyGrapher::Logger.new
+	@@logger = DependencyGrapher::Logger.new
 
-	#def setup
-		#@@logger.enable
-	#end
+	def setup
+		@@logger.enable
+	end
 
-	#def teardown
-		#@@logger.disable
-	#end
+	def teardown
+		@@logger.disable
+	end
 
-	#Minitest.after_run do 
-    #analyzer = DependencyGrapher::Grapher.new(@@logger.dependencies)
-		##grapher = DependencyGrapher::Grapher.new(@@logger.dependencies)
-	#end
+	Minitest.after_run do 
+    analyzer = DependencyGrapher::Grapher.new(@@logger.dependencies)
+		grapher = DependencyGrapher::Grapher.new(@@logger.dependencies)
+	end
+
 end
