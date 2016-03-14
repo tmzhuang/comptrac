@@ -14,3 +14,5 @@
 /.vagrant
 /lib/dependency_grapher
 package.box
+/config/secrets.yml
+.orig

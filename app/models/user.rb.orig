@@ -1,8 +1,0 @@
-class User < ActiveRecord::Base
-  has_many :user_skills
-<<<<<<< HEAD
-  has_many :skills, through: :user_skills
-=======
-  has_many :skills, through :user_skills
->>>>>>> a93707c65cd078c251743670c118f3c214130493
-end
