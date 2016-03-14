@@ -8,9 +8,9 @@
         - @user.errors.full_messages.each do |message|
           %li= message
   .field
-    = f.label :name
+    = f.label :email
     %br/
-    = f.text_field :name
+    = f.text_field :email
   = render partial: "add_skills_form", locals: { form: f }
   .actions
     = f.submit
