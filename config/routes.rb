@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
   scope :users, :controller => :users do
     get ':id/add_skills' => :add_skills, as: :add_skills
     get ':id/add_powers' => :add_powers, as: :add_powers
-
   end
   resources :user_skills
   resources :skills
@@ -11,6 +11,10 @@ Rails.application.routes.draw do
       get :skills
     end
   end
+
+
+  # Callback finish url
+  match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

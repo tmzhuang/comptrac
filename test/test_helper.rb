@@ -20,7 +20,6 @@ class ActiveSupport::TestCase
 
 	Minitest.after_run do 
     analyzer = DependencyGrapher::Grapher.new(@@logger.dependencies)
-		grapher = DependencyGrapher::Grapher.new(@@logger.dependencies)
+		#grapher = DependencyGrapher::Grapher.new(@@logger.dependencies)
 	end
-
 end
