@@ -30,6 +30,15 @@ Sprint 1
 --------
 - Research how to create a database for Acyclic graph for Skill dependencies
 - Design class overview (MVC)
-- Web page to create a user profile and add skills to user. 
-- Add necessary test cases
+- Web page to create, edit, update and delete users
+- Web page to create, edit, update and delete Skills
+- Add skills to users
+- Front end (Work on css, coffeescript)
 
+Sprint 2
+--------
+- UML class and Use case diagrams
+- User Authentication
+- User login page
+- Set competency level to novice when a new skill is added to user
+- Update user porfile to show competency level for each skill
