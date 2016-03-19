@@ -1,4 +1,5 @@
 class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  skip_before_action :authenticate_user!
   def self.provides_callback_for(provider)
     class_eval %Q{
       def #{provider}
@@ -12,18 +13,18 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
           redirect_to new_user_registration_url
         end
       end
-    }
+      }
   end
 
-  [:github].each do |provider|
+  [:github, :facebook].each do |provider|
     provides_callback_for provider
   end
 
-  def after_sign_in_path_for(resource)
-    if resource.email_verified?
-      super resource
-    else
-      finish_signup_path(resource)
-    end
-  end
+  #def after_sign_in_path_for(resource)
+    #if resource.email_verified?
+      #super resource
+    #else
+      #finish_signup_path(resource)
+    #end
+  #end
 end
