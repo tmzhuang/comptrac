@@ -19,13 +19,16 @@ gem 'haml-rails'
 
 # bootstrapping
 gem 'bootstrap-sass'
+gem 'font-awesome-sass'
 
 # User authentication gems
 gem 'bcrypt'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'omniauth-facebook'
 gem 'omniauth-identity'
+gem 'jquery-turbolinks'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
