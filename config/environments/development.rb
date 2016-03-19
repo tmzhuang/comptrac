@@ -38,6 +38,7 @@ Rails.application.configure do
 
   # Required to properly generate links inside email view
   config.action_mailer.default_url_options = { host: '127.0.0.1', port: 3000 }
+  config.action_mailer.perform_deliveries = true
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end

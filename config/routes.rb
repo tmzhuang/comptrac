@@ -1,30 +1,25 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
-  scope :users, :controller => :users do
-    get ':id/add_skills' => :add_skills, as: :add_skills
-    get ':id/add_powers' => :add_powers, as: :add_powers
-  end
   resources :user_skills
   resources :skills
-  resources :users do
-    member do
-      get :skills
-    end
-  end
+  resources :users
 
-
+  #scope :users, :controller => :users do
+    #get ':id/add_skills' => :add_skills, as: :user_add_skills
+    #get ':id/add_powers' => :add_powers, as: :user_add_powers
+  #end
   # Callback finish url
-  match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
+  #match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
+  # Callback url
+  match '/auth/:provider/callback', :to => 'sessions#create', via: [:get, :post]
 
-  # The priority is based upon order of creation: first created -> highest priority.
+  # The priority is based upon order of creation: first creased -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'user_skills#index'
+  root 'pages#landing'
 
-  post 'user_skills/search'
-  get  'user_skills/search_user'	
-	
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
