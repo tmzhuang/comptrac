@@ -1,7 +1,24 @@
-.skills
-  -if @skills.empty?
-    You have no skills :(
-  %ul.skills
-    = render @skills
-
-=link_to "Add skills", user_skills_path(current_user), class: "btn btn-primary"
+%p
+%center
+  %font{:size => "5"}
+    %strong
+      = @user.name
+%table{:style => "width:100%"}
+  %tr
+    %th
+      %p
+        %strong Skill
+    %th
+      %p
+        %strong Category
+    %th
+      %p
+        %strong Competence
+  - @skills.each do |skill|
+    %tr
+      %td
+        = skill.name
+      %td
+        = skill.category
+      %td
+        = UserSkill.find_by(skill_id: skill.id , user_id: @user.id).competence
