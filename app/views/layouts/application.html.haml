@@ -16,7 +16,7 @@
     .container
       %nav.navbar.navbar-default{:role => "navigation"}
         .navbar-header
-        %a.navbar-brand{:href => "#"} comptrac
+          %a.navbar-brand{:href => "/users/#{current_user.id}"} comptrac
         .navbar-collapse.collapse
           -#%ul.nav.navbar-nav.navbar-left
             -#%li
@@ -39,5 +39,5 @@
           -#%ul.nav.navbar-nav
             -#%li= link_to 'comptrac', root_path, class: 'navbar-brand'
     .container
-      %h1= yield :header
+      %h2= @header
       = yield
