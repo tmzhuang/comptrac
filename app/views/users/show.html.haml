@@ -1,3 +1,7 @@
 .skills
+  -if @skills.empty?
+    You have no skills :(
   %ul.skills
     = render @skills
+
+=link_to "Add skills", user_skills_path(current_user), class: "btn btn-primary"
