@@ -26,13 +26,6 @@ class UsersController < ApplicationController
     # @user.skills << Skill.find(params[:skill_id])
   end
 
-  def add_powers
-
-  end
-
-  def register
-  end
-
   # GET /users/1/edit
   def edit
   end
