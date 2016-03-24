@@ -39,6 +39,8 @@ end
   # POST /user_skills.json
   def create
     @user_skill = UserSkill.new(user_skill_params)
+    @user_skill.user = User.find(user_skill_params[:user_id])
+    @user_skill.skill = Skill.find(user_skill_params[:skill_id])
 
     respond_to do |format|
       if @user_skill.save
@@ -87,7 +89,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_skill_params
-      params.require(:user_skill).permit(:competence)
+      params.require(:user_skill).permit(:competence, :user_id, :skill_id)
     end
 def search_user
     @id=User.select("id").find_by name: params[:searchBy]

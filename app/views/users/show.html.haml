@@ -21,3 +21,5 @@
         = skill.category
       %td
         = UserSkill.find_by(skill_id: skill.id , user_id: @user.id).competence
+
+=link_to "Add skills", user_skills_path(current_user), class: "btn btn-primary"
