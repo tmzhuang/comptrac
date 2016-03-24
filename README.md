@@ -42,3 +42,12 @@ Sprint 2
 - User login page
 - Set competency level to novice when a new skill is added to user
 - Update user porfile to show competency level for each skill
+
+Sprint 3
+--------
+- Search page to search:
+	- users by skills
+	- skills by users
+- Setup user roles (Assessor, Admin)
+- Endorse feature to upvote skills
+- Unit testing
