@@ -5,9 +5,9 @@
   <%= @user.name %>
 </p>
 
-<div class="skills">
-  <ul class="skills">
-    <%= render @skills %>
+<div>
+  <ul>
+    <%= UserSkill.find_by(skill_id: @user.skills.ids , user_id: @user.id).competence %>
   </ul>
 </div>
 
