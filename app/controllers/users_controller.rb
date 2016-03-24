@@ -24,9 +24,7 @@ class UsersController < ApplicationController
   def add_skills
    # @user.skills << Skill.find(params[:skill_id])
   end
- def add_powers
-   
-  end
+
   # GET /users/1/edit
   def edit
   end
@@ -89,7 +87,7 @@ class UsersController < ApplicationController
     end
 
     def set_skills
-      @skills = User.find(params[:id]).skills
+      @skills = @user.skills
     end
 
     def set_all_skills
@@ -98,7 +96,13 @@ class UsersController < ApplicationController
 
     def set_user_skills
       @user_skills = @user.user_skills.build
+     # @user_skills = UserSkill.find_by skill_id: 1, user_id: 1
     end
+    def set_user_competence
+     @user_competence=UserSkill.select("competence").find_by skill_id: 1, user_id: 1
+    end
+	
+
 
     def new_user
       @user = User.new
