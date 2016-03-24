@@ -21,7 +21,11 @@ class User < ActiveRecord::Base
   end
 
   def has_skill?(skill)
-    skils.include?(skill)
+    skills.include?(skill)
+  end
+
+  def register(name)
+    RegisterUser.call(name)
   end
 
   def self.find_for_oauth(auth, signed_in_resource = nil)

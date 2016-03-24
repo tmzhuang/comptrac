@@ -1,11 +1,12 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  def setup
-    super
-  end
-
   test "the truth" do
-    assert true
+    #p "in UserTest the truth"
+    @user = users(:tianming)
+    @skill = skills(:ruby)
+    @user.add_skill(@skill)
+    @user.register(:tianming)
+    assert @user.has_skill?(@skill)
   end
 end
