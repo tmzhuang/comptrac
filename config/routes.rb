@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
-  resources :user_skills
   resources :skills
   resources :users do
-    #scope module: :users do
-      #resources :skills
-    #end
+    scope module: :users do
+      resources :skills
+    end
   end
 
 

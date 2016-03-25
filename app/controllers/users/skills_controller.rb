@@ -14,7 +14,7 @@ class Users::SkillsController < ApplicationController
 
   # GET /user/skills/new
   def new
-    @user_skill = User::Skill.new
+    @user_skill = UserSkill.new
   end
 
   # GET /user/skills/1/edit
@@ -24,11 +24,11 @@ class Users::SkillsController < ApplicationController
   # POST /user/skills
   # POST /user/skills.json
   def create
-    @user_skill = User::Skill.new(user_skill_params)
+    @user_skill = UserSkill.new(user_skill_params)
 
     respond_to do |format|
       if @user_skill.save
-        format.html { redirect_to '/user_skills', notice: 'Skill was successfully created.' }
+        format.html { redirect_to current_user, notice: 'Skill was successfully created.' }
         format.json { render :show, status: :created, location: @user_skill }
       else
         format.html { render :new }
@@ -64,13 +64,12 @@ class Users::SkillsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user_skill
-      @user_skill = User::Skill.find(params[:id])
+      @user_skill = current_user.skills.find(params[:user_skill][:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_skill_params
-      accessible = [ :name, :email, :id ] # extend with your own params
-      accessible << [ :password, :password_confirmation ] unless params[:user][:password].blank?
+      accessible = [ :user_id, :skill_id, :id ] # extend with your own params
       params.fetch(:user_skill, {}).permit(accessible)
     end
 end
