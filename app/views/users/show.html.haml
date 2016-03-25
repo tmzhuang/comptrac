@@ -3,6 +3,8 @@
   %font{:size => "5"}
     %strong
       = @user.name
+%br/
+%br/
 %table{:style => "width:100%"}
   %tr
     %th
@@ -22,3 +24,8 @@
         = skill.category
       %td
         = UserSkill.find_by(skill_id: skill.id , user_id: @user.id).competence
+
+%br/
+%br/
+=link_to "Add skills", new_user_skill_path(current_user), class: "btn btn-primary"
+
