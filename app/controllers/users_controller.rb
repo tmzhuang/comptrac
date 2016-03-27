@@ -12,6 +12,12 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def get_logger
+    logger = DependencyGrapher::Logger.new
+    logger.enable
+    logger.disable
+  end
+
   # GET /users/1
   # GET /users/1.json
   def show

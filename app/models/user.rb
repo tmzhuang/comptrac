@@ -21,11 +21,12 @@ class User < ActiveRecord::Base
   end
 
   def has_skill?(skill)
+    logger = DependencyGrapher::Logger.new
     skills.include?(skill)
   end
 
-  def register(name)
-    RegisterUser.call(name)
+  def get_logger
+    logger = GetLogger.call
   end
 
   def self.find_for_oauth(auth, signed_in_resource = nil)
