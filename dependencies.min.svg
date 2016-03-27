@@ -1,0 +1,759 @@
+<svg width="2940" height="460pt" viewBox="0.00 0.00 2205.00 460.00" xmlns="http://www.w3.org/2000/svg">
+    <g class="graph" transform="translate(4 456)">
+        <title>
+            G
+        </title>
+        <path fill="#fff" d="M-4 4v-460h2205V4H-4z"/>
+        <g class="cluster">
+            <title>
+                cluster_AbstractController
+            </title>
+            <path fill="none" stroke="#000" d="M576-291v-153h390v153H576z"/>
+            <text text-anchor="middle" x="771" y="-428.8" font-family="Times,serif" font-size="14">
+                AbstractController
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_AbstractController_Helpers
+            </title>
+            <path fill="none" stroke="#000" d="M584-299v-114h374v114H584z"/>
+            <text text-anchor="middle" x="771" y="-397.8" font-family="Times,serif" font-size="14">
+                Helpers
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_AbstractController_Helpers_ClassMethods
+            </title>
+            <path fill="none" stroke="#000" d="M592-307v-75h358v75H592z"/>
+            <text text-anchor="middle" x="771" y="-366.8" font-family="Times,serif" font-size="14">
+                ClassMethods
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_ApplicationController
+            </title>
+            <path fill="none" stroke="#000" d="M200-177v-75h977v75H200z"/>
+            <text text-anchor="middle" x="688.5" y="-236.8" font-family="Times,serif" font-size="14">
+                ApplicationController
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_ActionController
+            </title>
+            <path fill="none" stroke="#000" d="M8-291v-153h560v153H8z"/>
+            <text text-anchor="middle" x="288" y="-428.8" font-family="Times,serif" font-size="14">
+                ActionController
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_ActionController_Helpers
+            </title>
+            <path fill="none" stroke="#000" d="M16-299v-114h268v114H16z"/>
+            <text text-anchor="middle" x="150" y="-397.8" font-family="Times,serif" font-size="14">
+                Helpers
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_ActionController_Helpers_ClassMethods
+            </title>
+            <path fill="none" stroke="#000" d="M24-307v-75h252v75H24z"/>
+            <text text-anchor="middle" x="150" y="-366.8" font-family="Times,serif" font-size="14">
+                ClassMethods
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_ActionController_ParamsWrapper
+            </title>
+            <path fill="none" stroke="#000" d="M292-299v-114h138v114H292z"/>
+            <text text-anchor="middle" x="361" y="-397.8" font-family="Times,serif" font-size="14">
+                ParamsWrapper
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_ActionController_ParamsWrapper_ClassMethods
+            </title>
+            <path fill="none" stroke="#000" d="M300-307v-75h122v75H300z"/>
+            <text text-anchor="middle" x="361" y="-366.8" font-family="Times,serif" font-size="14">
+                ClassMethods
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_ActionController_Metal
+            </title>
+            <path fill="none" stroke="#000" d="M438-307v-75h122v75H438z"/>
+            <text text-anchor="middle" x="499" y="-366.8" font-family="Times,serif" font-size="14">
+                Metal
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_ActiveSupport
+            </title>
+            <path fill="none" stroke="#000" d="M1346-291v-153h198v153h-198z"/>
+            <text text-anchor="middle" x="1445" y="-428.8" font-family="Times,serif" font-size="14">
+                ActiveSupport
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_ActiveSupport_Callbacks
+            </title>
+            <path fill="none" stroke="#000" d="M1354-299v-114h182v114h-182z"/>
+            <text text-anchor="middle" x="1445" y="-397.8" font-family="Times,serif" font-size="14">
+                Callbacks
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_ActiveSupport_Callbacks_ClassMethods
+            </title>
+            <path fill="none" stroke="#000" d="M1362-307v-75h166v75h-166z"/>
+            <text text-anchor="middle" x="1445" y="-366.8" font-family="Times,serif" font-size="14">
+                ClassMethods
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_UsersController
+            </title>
+            <path fill="none" stroke="#000" d="M1185-177v-75h540v75h-540z"/>
+            <text text-anchor="middle" x="1455" y="-236.8" font-family="Times,serif" font-size="14">
+                UsersController
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_DependencyGrapher
+            </title>
+            <path fill="brown" stroke="#000" d="M1496-16v-114h341v114h-341z"/>
+            <text text-anchor="middle" x="1666.5" y="-114.8" font-family="Times,serif" font-size="14">
+                DependencyGrapher
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_DependencyGrapher_Logger
+            </title>
+            <path fill="brown" stroke="#000" d="M1504-24v-75h325v75h-325z"/>
+            <text text-anchor="middle" x="1666.5" y="-83.8" font-family="Times,serif" font-size="14">
+                Logger
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_UserTest
+            </title>
+            <path fill="none" stroke="#000" d="M1588-307v-75h130v75h-130z"/>
+            <text text-anchor="middle" x="1653" y="-366.8" font-family="Times,serif" font-size="14">
+                UserTest
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_User
+            </title>
+            <path fill="none" stroke="#000" d="M1877-169v-114h253v114h-253z"/>
+            <text text-anchor="middle" x="2003.5" y="-267.8" font-family="Times,serif" font-size="14">
+                User
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_User_GeneratedAssociationMethods
+            </title>
+            <path fill="none" stroke="#000" d="M1885-177v-75h237v75h-237z"/>
+            <text text-anchor="middle" x="2003.5" y="-236.8" font-family="Times,serif" font-size="14">
+                GeneratedAssociationMethods
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_ActiveRecord
+            </title>
+            <path fill="none" stroke="#000" d="M1851-8v-153h338V-8h-338z"/>
+            <text text-anchor="middle" x="2020" y="-145.8" font-family="Times,serif" font-size="14">
+                ActiveRecord
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_ActiveRecord_Associations
+            </title>
+            <path fill="none" stroke="#000" d="M1859-16v-114h322v114h-322z"/>
+            <text text-anchor="middle" x="2020" y="-114.8" font-family="Times,serif" font-size="14">
+                Associations
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_ActiveRecord_Associations_CollectionAssociation
+            </title>
+            <path fill="none" stroke="#000" d="M2001-24v-75h172v75h-172z"/>
+            <text text-anchor="middle" x="2087" y="-83.8" font-family="Times,serif" font-size="14">
+                CollectionAssociation
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_User(id: integer, email: string, name: string, enc...
+            </title>
+            <path fill="none" stroke="#000" d="M1726-307v-75h388v75h-388z"/>
+            <text text-anchor="middle" x="1920" y="-366.8" font-family="Times,serif" font-size="14">
+                User(id: integer, email: string, name: string, enc...
+            </text>
+        </g>
+        <g class="cluster">
+            <title>
+                cluster_GetLogger
+            </title>
+            <path fill="#c1cdcd" stroke="#000" d="M1741-177v-75h93v75h-93z"/>
+            <text text-anchor="middle" x="1787.5" y="-236.8" font-family="Times,serif" font-size="14">
+                GetLogger
+            </text>
+        </g>
+        <g class="node">
+            <title>
+                AbstractController::Helpers::ClassMethodsadd_template_helper
+            </title>
+            <ellipse fill="none" stroke="#000" cx="833" cy="-333" rx="108.31" ry="18"/>
+            <text text-anchor="middle" x="833" y="-329.3" font-family="Times,serif" font-size="14">
+                add_template_helper
+            </text>
+        </g>
+        <g class="node">
+            <title>
+                ApplicationController_helpers
+            </title>
+            <ellipse fill="none" stroke="#000" cx="833" cy="-203" rx="50.068" ry="18"/>
+            <text text-anchor="middle" x="833" y="-199.3" font-family="Times,serif" font-size="14">
+                _helpers
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                AbstractController::Helpers::ClassMethodsadd_template_helper-&gt;ApplicationController_helpers
+            </title>
+            <path fill="none" stroke="dimgrey" d="M804.786-315.528c-15.003 22.491-16.265 62.921-3.786 88.431"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M804.056-228.807l2.163 10.372-8.159-6.759 5.996-3.613z"/>
+        </g>
+        <g class="edge">
+            <title>
+                AbstractController::Helpers::ClassMethodsadd_template_helper-&gt;ApplicationController_helpers
+            </title>
+            <path fill="none" stroke="dimgrey" d="M814.075-315.266c-9.609 21.895-10.642 60.468-3.099 85.948"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M814.261-230.526l.173 10.594-6.741-8.174 6.568-2.42z"/>
+        </g>
+        <g class="edge">
+            <title>
+                AbstractController::Helpers::ClassMethodsadd_template_helper-&gt;ApplicationController_helpers
+            </title>
+            <path fill="none" stroke="dimgrey" d="M823.48-315.003c-4.639 21.422-5.223 58.501-1.751 83.863"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M825.215-231.517l-1.75 10.449-5.148-9.26 6.898-1.189z"/>
+        </g>
+        <g class="edge">
+            <title>
+                AbstractController::Helpers::ClassMethodsadd_template_helper-&gt;ApplicationController_helpers
+            </title>
+            <path fill="none" stroke="dimgrey" d="M833-314.737v83.295"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M836.5-231.398l-3.5 10-3.5-10h7z"/>
+        </g>
+        <g class="edge">
+            <title>
+                AbstractController::Helpers::ClassMethodsadd_template_helper-&gt;ApplicationController_helpers
+            </title>
+            <path fill="none" stroke="dimgrey" d="M842.52-315.003c4.639 21.422 5.223 58.501 1.751 83.863"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M847.683-230.328l-5.148 9.26-1.75-10.449 6.898 1.189z"/>
+        </g>
+        <g class="edge">
+            <title>
+                AbstractController::Helpers::ClassMethodsadd_template_helper-&gt;ApplicationController_helpers
+            </title>
+            <path fill="none" stroke="dimgrey" d="M851.925-315.266c9.609 21.895 10.642 60.468 3.099 85.948"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M858.307-228.106l-6.741 8.174.173-10.594 6.568 2.42z"/>
+        </g>
+        <g class="edge">
+            <title>
+                AbstractController::Helpers::ClassMethodsadd_template_helper-&gt;ApplicationController_helpers
+            </title>
+            <path fill="none" stroke="dimgrey" d="M861.214-315.528c15.003 22.491 16.265 62.921 3.786 88.431"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M867.94-225.194l-8.159 6.759 2.163-10.372 5.996 3.613z"/>
+        </g>
+        <g class="node">
+            <title>
+                UsersController_helpers
+            </title>
+            <ellipse fill="none" stroke="#000" cx="1243" cy="-203" rx="50.068" ry="18"/>
+            <text text-anchor="middle" x="1243" y="-199.3" font-family="Times,serif" font-size="14">
+                _helpers
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                AbstractController::Helpers::ClassMethodsadd_template_helper-&gt;UsersController_helpers
+            </title>
+            <path fill="none" stroke="dimgrey" d="M933.629-326.159C1021.1-319.587 1140.03-306.603 1181-283c21.36 12.302 38.03 35.106 48.68 53.063"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1232.82-231.498l1.88 10.428-7.97-6.982 6.09-3.446z"/>
+        </g>
+        <g class="node">
+            <title>
+                ActionController::Helpers::ClassMethodsall_application_helpers
+            </title>
+            <ellipse fill="none" stroke="#000" cx="150" cy="-333" rx="117.935" ry="18"/>
+            <text text-anchor="middle" x="150" y="-329.3" font-family="Times,serif" font-size="14">
+                all_application_helpers
+            </text>
+        </g>
+        <g class="node">
+            <title>
+                ApplicationControllerhelpers_path
+            </title>
+            <ellipse fill="none" stroke="#000" cx="279" cy="-203" rx="71.24" ry="18"/>
+            <text text-anchor="middle" x="279" y="-199.3" font-family="Times,serif" font-size="14">
+                helpers_path
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                ActionController::Helpers::ClassMethodsall_application_helpers-&gt;ApplicationControllerhelpers_path
+            </title>
+            <path fill="none" stroke="dimgrey" d="M167.13-315.003l87.965 87.283"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M257.576-230.189l4.633 9.528-9.564-4.559 4.931-4.969z"/>
+        </g>
+        <g class="node">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks
+            </title>
+            <ellipse fill="none" stroke="#000" cx="1445" cy="-333" rx="74.615" ry="18"/>
+            <text text-anchor="middle" x="1445" y="-329.3" font-family="Times,serif" font-size="14">
+                get_callbacks
+            </text>
+        </g>
+        <g class="node">
+            <title>
+                ApplicationController_process_action_callbacks
+            </title>
+            <ellipse fill="none" stroke="#000" cx="1035" cy="-203" rx="133.333" ry="18"/>
+            <text text-anchor="middle" x="1035" y="-199.3" font-family="Times,serif" font-size="14">
+                _process_action_callbacks
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;ApplicationController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1372.17-329.234C1298.5-324.217 1198.32-311.39 1118-283c-38.53 13.619-79.17 36.388-97.05 53.992"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1023.21-226.259l-9.11 5.416 3.74-9.912 5.37 4.496z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;ApplicationController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1372.9-328.387c-66.76 5.545-160.75 18.473-236.9 45.387-39.17 13.844-80.51 37.143-101.14 54.861"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1037.23-225.555l-9.65 4.382 4.81-9.441 4.84 5.059z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;ApplicationController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1374.12-327.324c-61.04 6.061-148.48 19.002-220.12 44.324-39.69 14.028-81.62 37.766-105.29 55.567"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1050.85-224.666l-10 3.493 5.64-8.968 4.36 5.475z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;ApplicationController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1376.21-326.065c-56.33 6.521-137.18 19.374-204.21 43.065-40.28 14.238-82.87 38.477-109.84 56.36"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1063.88-223.574l-10.24 2.731 6.3-8.519 3.94 5.788z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;ApplicationController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1379.16-324.627C1326.81-317.723 1252.41-305.06 1190-283c-41.05 14.511-84.5 39.41-115.07 57.382"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1076.66-222.576l-10.39 2.061 6.84-8.092 3.55 6.031z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;ApplicationController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1383.04-323.04c-48.91 7.194-117.13 19.573-175.04 40.04-41.78 14.768-86.04 40.295-120.58 58.329"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1088.89-221.494l-10.49 1.466 7.29-7.689 3.2 6.223z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;ApplicationController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1387.93-321.357c-45.84 7.388-108.31 19.404-161.93 38.357-42.51 15.027-87.6 41.194-126.5 59.271"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1100.82-220.484l-10.55.937 7.66-7.314 2.89 6.377z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;ApplicationController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1394.55-319.745c-43.12 7.484-100.67 19.113-150.55 36.745-43.51 15.378-89.7 42.422-133.62 60.525"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1111.63-219.206l-10.58.45 7.99-6.953 2.59 6.503z"/>
+        </g>
+        <g class="node">
+            <title>
+                UsersController_process_action_callbacks
+            </title>
+            <ellipse fill="none" stroke="#000" cx="1445" cy="-203" rx="133.333" ry="18"/>
+            <text text-anchor="middle" x="1445" y="-199.3" font-family="Times,serif" font-size="14">
+                _process_action_callbacks
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;UsersController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1404.83-317.566c-24.29 21.805-27.08 63.388-8.36 89.731"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1399.16-230.074l3.81 9.887-9.15-5.354 5.34-4.533z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;UsersController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1412.91-316.56c-17.77 21.65-19.92 61.287-6.43 87.277"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1409.51-231.033l2.39 10.322-8.31-6.581 5.92-3.741z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;UsersController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1421.63-315.789c-12.16 21.594-13.64 60.05-4.43 85.739"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1420.41-231.453l.85 10.561-7.25-7.728 6.4-2.833z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;UsersController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1430.81-315.266c-7.06 21.441-7.95 58.874-2.67 84.346"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1431.55-231.705l-.88 10.559-5.9-8.802 6.78-1.757z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;UsersController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1440.24-315.003c-2.32 21.422-2.61 58.501-.88 83.863"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1442.86-231.331l-2.63 10.263-4.34-9.662 6.97-.601z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;UsersController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1449.76-315.003c2.32 21.422 2.61 58.501.88 83.863"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1454.11-230.73l-4.34 9.662-2.63-10.263 6.97.601z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;UsersController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1459.19-315.266c7.06 21.441 7.95 58.874 2.67 84.346"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1465.23-229.948l-5.9 8.802-.88-10.559 6.78 1.757z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;UsersController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1468.37-315.789c12.16 21.594 13.64 60.05 4.43 85.739"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1475.99-228.62l-7.25 7.728.85-10.561 6.4 2.833z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;UsersController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1477.09-316.56c17.77 21.65 19.92 61.287 6.43 87.277"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1486.41-227.292l-8.31 6.581 2.39-10.322 5.92 3.741z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActiveSupport::Callbacks::ClassMethodsget_callbacks-&gt;UsersController_process_action_callbacks
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1485.17-317.566c24.29 21.805 27.08 63.388 8.36 89.731"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1496.18-225.541l-9.15 5.354 3.81-9.887 5.34 4.533z"/>
+        </g>
+        <g class="node">
+            <title>
+                ActionController::ParamsWrapper::ClassMethodsinherited
+            </title>
+            <ellipse fill="none" stroke="#000" cx="361" cy="-333" rx="52.944" ry="18"/>
+            <text text-anchor="middle" x="361" y="-329.3" font-family="Times,serif" font-size="14">
+                inherited
+            </text>
+        </g>
+        <g class="node">
+            <title>
+                ApplicationController_wrapper_options
+            </title>
+            <ellipse fill="none" stroke="#000" cx="462" cy="-203" rx="93.387" ry="18"/>
+            <text text-anchor="middle" x="462" y="-199.3" font-family="Times,serif" font-size="14">
+                _wrapper_options
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                ActionController::ParamsWrapper::ClassMethodsinherited-&gt;ApplicationController_wrapper_options
+            </title>
+            <path fill="none" stroke="dimgrey" d="M369.652-315.003c15.039 22.091 45.374 60.834 67.314 86.206"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M439.789-230.888l3.976 9.82-9.233-5.197 5.257-4.623z"/>
+        </g>
+        <g class="edge">
+            <title>
+                ActionController::ParamsWrapper::ClassMethodsinherited-&gt;ApplicationController_wrapper_options
+            </title>
+            <path fill="none" stroke="dimgrey" d="M378.465-315.789c19.535 21.664 50.31 60.3 68.717 85.988"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M450.265-231.502l2.874 10.198-8.606-6.18 5.732-4.018z"/>
+        </g>
+        <g class="node">
+            <title>
+                AbstractController::Helpers::ClassMethodsinherited
+            </title>
+            <ellipse fill="none" stroke="#000" cx="653" cy="-333" rx="52.944" ry="18"/>
+            <text text-anchor="middle" x="653" y="-329.3" font-family="Times,serif" font-size="14">
+                inherited
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                AbstractController::Helpers::ClassMethodsinherited-&gt;ApplicationController_helpers
+            </title>
+            <path fill="none" stroke="dimgrey" d="M672.137-316.078C683.803-307.24 699.424-296.875 715-291c24.348 9.183 35.537-5.136 58 8 21.016 12.29 37.117 35.095 47.323 53.055"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M823.441-231.537l1.677 10.461-7.835-7.132 6.158-3.329z"/>
+        </g>
+        <g class="node">
+            <title>
+                ActionController::Metalinherited
+            </title>
+            <ellipse fill="none" stroke="#000" cx="499" cy="-333" rx="52.944" ry="18"/>
+            <text text-anchor="middle" x="499" y="-329.3" font-family="Times,serif" font-size="14">
+                inherited
+            </text>
+        </g>
+        <g class="node">
+            <title>
+                ApplicationControllermiddleware_stack
+            </title>
+            <ellipse fill="none" stroke="#000" cx="669" cy="-203" rx="95.312" ry="18"/>
+            <text text-anchor="middle" x="669" y="-199.3" font-family="Times,serif" font-size="14">
+                middleware_stack
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                ActionController::Metalinherited-&gt;ApplicationControllermiddleware_stack
+            </title>
+            <path fill="none" stroke="dimgrey" d="M519.845-316.305l118.824 89.468"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M641.023-229.446l5.883 8.811-10.094-3.219 4.211-5.592z"/>
+        </g>
+        <g class="node">
+            <title>
+                UsersControllerget_logger
+            </title>
+            <ellipse fill="none" stroke="#000" cx="1657" cy="-203" rx="60.167" ry="18"/>
+            <text text-anchor="middle" x="1657" y="-199.3" font-family="Times,serif" font-size="14">
+                get_logger
+            </text>
+        </g>
+        <g class="node">
+            <title>
+                DependencyGrapher::Loggerinitialize
+            </title>
+            <ellipse fill="none" stroke="#000" cx="1770" cy="-50" rx="50.543" ry="18"/>
+            <text text-anchor="middle" x="1770" y="-46.3" font-family="Times,serif" font-size="14">
+                initialize
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                UsersControllerget_logger-&gt;DependencyGrapher::Loggerinitialize
+            </title>
+            <path fill="none" stroke="red" d="M1681.22-186.515c9.73 6.999 20.55 15.865 28.78 25.515 21.73 25.496 39.03 60.123 49.36 83.67"/>
+            <path fill="red" stroke="red" d="M1762.65-78.547l.71 10.57-7.15-7.82 6.44-2.75z"/>
+        </g>
+        <g class="node">
+            <title>
+                DependencyGrapher::Loggerenable
+            </title>
+            <ellipse fill="none" stroke="#000" cx="1660" cy="-50" rx="41.394" ry="18"/>
+            <text text-anchor="middle" x="1660" y="-46.3" font-family="Times,serif" font-size="14">
+                enable
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                UsersControllerget_logger-&gt;DependencyGrapher::Loggerenable
+            </title>
+            <path fill="none" stroke="red" d="M1657.34-184.972a428363 428363 0 0 0 2.12 106.646"/>
+            <path fill="red" stroke="red" d="M1662.96-78.265l-3.3 10.067-3.7-9.928 7-.14z"/>
+        </g>
+        <g class="node">
+            <title>
+                DependencyGrapher::Loggerdisable
+            </title>
+            <ellipse fill="none" stroke="#000" cx="1556" cy="-50" rx="44.295" ry="18"/>
+            <text text-anchor="middle" x="1556" y="-46.3" font-family="Times,serif" font-size="14">
+                disable
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                UsersControllerget_logger-&gt;DependencyGrapher::Loggerdisable
+            </title>
+            <path fill="none" stroke="red" d="M1634.66-186.136c-8.76 6.997-18.44 15.76-25.66 25.136-19.83 25.745-34.92 60.106-43.83 83.53"/>
+            <path fill="red" stroke="red" d="M1568.37-76.026l-6.75 8.172.18-10.593 6.57 2.421z"/>
+        </g>
+        <g class="node">
+            <title>
+                UserTesttest_dep2
+            </title>
+            <ellipse fill="none" stroke="#000" cx="1653" cy="-333" rx="56.317" ry="18"/>
+            <text text-anchor="middle" x="1653" y="-329.3" font-family="Times,serif" font-size="14">
+                test_dep2
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                UserTesttest_dep2-&gt;UsersControllerget_logger
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1653.54-314.737c.67 21.376 1.81 58.046 2.6 83.295"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1659.64-231.502l-3.18 10.104-3.81-9.886 6.99-.218z"/>
+        </g>
+        <g class="node">
+            <title>
+                User::GeneratedAssociationMethodsuser_skills
+            </title>
+            <ellipse fill="none" stroke="#000" cx="2053" cy="-203" rx="60.167" ry="18"/>
+            <text text-anchor="middle" x="2053" y="-199.3" font-family="Times,serif" font-size="14">
+                user_skills
+            </text>
+        </g>
+        <g class="node">
+            <title>
+                ActiveRecord::Associationsassociation
+            </title>
+            <ellipse fill="none" stroke="#000" cx="1930" cy="-50" rx="63.067" ry="18"/>
+            <text text-anchor="middle" x="1930" y="-46.3" font-family="Times,serif" font-size="14">
+                association
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                User::GeneratedAssociationMethodsuser_skills-&gt;ActiveRecord::Associationsassociation
+            </title>
+            <path fill="none" stroke="dimgrey" d="M2027.6-186.537c-10.24 6.996-21.72 15.864-30.6 25.537-23.4 25.474-42.98 60.326-54.82 83.921"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1945.28-75.46l-7.54 7.439 1.26-10.52 6.28 3.082z"/>
+        </g>
+        <g class="node">
+            <title>
+                ActiveRecord::Associations::CollectionAssociationreader
+            </title>
+            <ellipse fill="none" stroke="#000" cx="2053" cy="-50" rx="41.394" ry="18"/>
+            <text text-anchor="middle" x="2053" y="-46.3" font-family="Times,serif" font-size="14">
+                reader
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                User::GeneratedAssociationMethodsuser_skills-&gt;ActiveRecord::Associations::CollectionAssociationreader
+            </title>
+            <path fill="none" stroke="dimgrey" d="M2053-184.972v106.646"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M2056.5-78.198l-3.5 10-3.5-10h7z"/>
+        </g>
+        <g class="node">
+            <title>
+                User(id: integer, email: string, name: string, enc...add_skill
+            </title>
+            <ellipse fill="none" stroke="#000" cx="2054" cy="-333" rx="51.493" ry="18"/>
+            <text text-anchor="middle" x="2054" y="-329.3" font-family="Times,serif" font-size="14">
+                add_skill
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                User(id: integer, email: string, name: string, enc...add_skill-&gt;User::GeneratedAssociationMethodsuser_skills
+            </title>
+            <path fill="none" stroke="dimgrey" d="M2053.87-314.737l-.66 83.295"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M2056.71-231.37l-3.57 9.972-3.43-10.027 7 .055z"/>
+        </g>
+        <g class="node">
+            <title>
+                GetLoggercall
+            </title>
+            <ellipse fill="none" stroke="#000" cx="1790" cy="-203" rx="26.949" ry="18"/>
+            <text text-anchor="middle" x="1790" y="-199.3" font-family="Times,serif" font-size="14">
+                call
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                GetLoggercall-&gt;DependencyGrapher::Loggerinitialize
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1787.74-184.972c-3.43 25.942-10.01 75.615-14.12 106.646"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1777.06-77.651l-4.78 9.453-2.16-10.373 6.94.92z"/>
+        </g>
+        <g class="node">
+            <title>
+                User(id: integer, email: string, name: string, enc...get_logger
+            </title>
+            <ellipse fill="none" stroke="#000" cx="1794" cy="-333" rx="60.167" ry="18"/>
+            <text text-anchor="middle" x="1794" y="-329.3" font-family="Times,serif" font-size="14">
+                get_logger
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                User(id: integer, email: string, name: string, enc...get_logger-&gt;GetLoggercall
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1793.46-314.737c-.67 21.376-1.81 58.046-2.6 83.295"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1794.35-231.284l-3.81 9.886-3.18-10.104 6.99.218z"/>
+        </g>
+        <g class="node">
+            <title>
+                User::GeneratedAssociationMethodsskills
+            </title>
+            <ellipse fill="none" stroke="#000" cx="1930" cy="-203" rx="35.145" ry="18"/>
+            <text text-anchor="middle" x="1930" y="-199.3" font-family="Times,serif" font-size="14">
+                skills
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                User::GeneratedAssociationMethodsskills-&gt;ActiveRecord::Associationsassociation
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1930-184.972v106.646"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1933.5-78.198l-3.5 10-3.5-10h7z"/>
+        </g>
+        <g class="edge">
+            <title>
+                User::GeneratedAssociationMethodsskills-&gt;ActiveRecord::Associations::CollectionAssociationreader
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1950.19-188.238c9.91 6.378 22.19 13.744 33.81 19.238 9.78 4.626 15.12.585 23 8 23.62 22.211 35.55 58.419 41.26 83.183"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M2051.7-78.487l-1.36 10.508-5.49-9.059 6.85-1.449z"/>
+        </g>
+        <g class="node">
+            <title>
+                User(id: integer, email: string, name: string, enc...has_skill?
+            </title>
+            <ellipse fill="none" stroke="#000" cx="1928" cy="-333" rx="55.344" ry="18"/>
+            <text text-anchor="middle" x="1928" y="-329.3" font-family="Times,serif" font-size="14">
+                has_skill?
+            </text>
+        </g>
+        <g class="edge">
+            <title>
+                User(id: integer, email: string, name: string, enc...has_skill?-&gt;User::GeneratedAssociationMethodsskills
+            </title>
+            <path fill="none" stroke="dimgrey" d="M1928.27-314.737c.33 21.376.91 58.046 1.3 83.295"/>
+            <path fill="dimgrey" stroke="dimgrey" d="M1933.07-231.451l-3.34 10.053-3.66-9.944 7-.109z"/>
+        </g>
+    </g>
+</svg>
