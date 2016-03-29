@@ -1,5 +1,6 @@
 class UserSkillsController < ApplicationController
   before_action :set_user_skill, only: [:show, :edit, :update, :destroy]
+ # skip_callback(:search ,:before, :set_user_skill)
 
   # GET /user_skills
   # GET /user_skills.json
@@ -19,6 +20,24 @@ class UserSkillsController < ApplicationController
 
   # GET /user_skills/1/edit
   def edit
+  end
+
+
+	
+  def search_user
+    @id=User.select("id").find_by name: 'Ali'
+    @user = User.find(@id) 
+     respond_to do |format|
+      format.html { redirect_to @user, notice: 'User was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+	
+  def search_skill
+	@id=Skill.select("id").find_by name: 'Java'
+	@searchedUsers=UserSkill.where(skill_id: @id).select("user_id")
+	#@searchedUsers=UserSkill.find_by skill_id: @id
+
   end
 
   # POST /user_skills
