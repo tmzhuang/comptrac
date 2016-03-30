@@ -1,5 +1,6 @@
 class UserSkillsController < ApplicationController
   before_action :set_user_skill, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :verify_authenticity_token  
  # skip_callback(:search ,:before, :set_user_skill)
 
   # GET /user_skills
@@ -22,16 +23,16 @@ class UserSkillsController < ApplicationController
   def edit
   end
 
-
-	
-  def search_user
-    @id=User.select("id").find_by name: 'Ali'
+def search_user
+    @id=User.select("id").find_by name: params[:username]
     @user = User.find(@id) 
      respond_to do |format|
       format.html { redirect_to @user, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
+	
+  
 	
   def search_skill
 	@id=Skill.select("id").find_by name: 'Java'
@@ -81,9 +82,13 @@ class UserSkillsController < ApplicationController
   end
 
   private
+
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user_skill
+      if params[:id]!="search_user"
       @user_skill = UserSkill.find(params[:id])
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
