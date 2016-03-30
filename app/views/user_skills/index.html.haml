@@ -27,7 +27,7 @@
 
 	
     }
-    .tfselect{
+    #tfselect{
     	width: 100px;  height: 40px; position: absolute;
     right: 81%;  top: 30%;  
     	padding: 5px 15px;
@@ -70,23 +70,17 @@
     .tfclear{
     	clear:both;
     }
-%body
-%select.tfselect
-  %option{:value => "users"} Users
-  %option{:value => "skills"} Skills
-  
-  / HTML for SEARCH BAR
-  #tfheader
-    %form#tfnewsearch{:action => "http://www.google.com", :method => "get"}
-      %input.tftextinput{:maxlength => "120", :name => "q", :size => "21", :type => "text"}
-        %input.tfbutton{:type => "submit", :value => "search"}
-    .tfclear
-
-
-
-
-
-
+  <select id="tfselect">
+  <option value="users">Users</option>
+  <option value="skills">Skills</option>
+  </select> 
+  <div id="tfheader">
+  <form id="tfnewsearch" method="post" action= /user_skills/search_user>
+  <input type="text" class="tftextinput" name="username" size="21" maxlength="120">
+  <input type="submit" value="search" class="tfbutton">
+  </form>
+  <div class="tfclear"></div>
+  </div>
 
 
 
