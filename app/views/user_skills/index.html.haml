@@ -70,44 +70,22 @@
     .tfclear{
     	clear:both;
     }
-  <select id="tfselect">
+    div.hidden{
+        display: none;
+    }
+  <div id="tfheader">
+  <form id="tfnewsearch" method="post" action= /user_skills/search>
+  <select id="tfselect" name="select">
   <option value="users">Users</option>
   <option value="skills">Skills</option>
   </select> 
-  <div id="tfheader">
-  <form id="tfnewsearch" method="post" action= /user_skills/search_user>
-  <input type="text" class="tftextinput" name="username" size="21" maxlength="120">
-  <input type="submit" value="search" class="tfbutton">
+ 
+  <input type="text" class="tftextinput" name="searchBy" size="21" maxlength="120">
+  <input type="submit" id="button" value="search" class="tfbutton">
   </form>
   <div class="tfclear"></div>
   </div>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
--#%table
-  %thead
-    %tr
-      %th Competence
-      %th{:colspan => "3"}
-  %tbody
-    - @user_skills.each do |user_skill|
-      %tr
-        %td= user_skill.competence
-        %td= link_to 'Show', user_skill
-        %td= link_to 'Edit', edit_user_skill_path(user_skill)
-        %td= link_to 'Destroy', user_skill, method: :delete, data: { confirm: 'Are you sure?' }
-%br/
--#= link_to 'New User skill', new_user_skill_path
 

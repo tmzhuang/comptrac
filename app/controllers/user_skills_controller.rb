@@ -23,23 +23,17 @@ class UserSkillsController < ApplicationController
   def edit
   end
 
-def search_user
-    @id=User.select("id").find_by name: params[:username]
-    @user = User.find(@id) 
-     respond_to do |format|
-      format.html { redirect_to @user, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+
+def search
+  if params[:select]== "users"
+  search_user
+  else
+  search_skill
   end
+end
 	
   
 	
-  def search_skill
-	@id=Skill.select("id").find_by name: 'Java'
-	@searchedUsers=UserSkill.where(skill_id: @id).select("user_id")
-	#@searchedUsers=UserSkill.find_by skill_id: @id
-
-  end
 
   # POST /user_skills
   # POST /user_skills.json
@@ -86,7 +80,7 @@ def search_user
 
     # Use callbacks to share common setup or constraints between actions.
     def set_user_skill
-      if params[:id]!="search_user"
+      if params[:id]!="search"
       @user_skill = UserSkill.find(params[:id])
       end
     end
@@ -95,4 +89,20 @@ def search_user
     def user_skill_params
       params.require(:user_skill).permit(:competence)
     end
+def search_user
+    @id=User.select("id").find_by name: params[:searchBy]
+    @user = User.find(@id) 
+     respond_to do |format|
+      format.html { redirect_to @user, notice: 'User was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+  def search_skill
+	@skillSearch= params[:searchBy]
+	@id=Skill.select("id").find_by name: params[:searchBy]
+	@searchedUsers=UserSkill.where(skill_id: @id).select("user_id","competence")
+	#@searchedUsers=UserSkill.find_by skill_id: @id
+
+  end
+
 end
