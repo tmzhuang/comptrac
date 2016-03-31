@@ -92,16 +92,19 @@ end
 def search_user
     @id=User.select("id").find_by name: params[:searchBy]
     @user = User.find(@id) 
-     respond_to do |format|
-      format.html { redirect_to @user, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+  @skills = @user.skills
+     #respond_to do |format|
+      #format.html { redirect_to "user_skills/search_user", notice: 'User was successfully shown.' }
+      #format.json { head :no_content }
+    #end
+  render :action => :search_user
   end
   def search_skill
 	@skillSearch= params[:searchBy]
 	@id=Skill.select("id").find_by name: params[:searchBy]
 	@searchedUsers=UserSkill.where(skill_id: @id).select("user_id","competence")
-	#@searchedUsers=UserSkill.find_by skill_id: @id
+  render :action => :search_skill
+	
 
   end
 
