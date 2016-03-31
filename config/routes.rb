@@ -18,7 +18,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'user_skills#index'
 
-  post 'user_skills/search'	
+  post 'user_skills/search'
+  get  'user_skills/search_user'	
 	
 
   # Example of regular route:

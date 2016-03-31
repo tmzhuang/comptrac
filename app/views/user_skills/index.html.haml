@@ -17,7 +17,7 @@
     }
     .tftextinput{
     	width: 500px;  height: 30px; position: absolute;
-    right: 39%;  top: 30%;  
+    right: 32%;  top: 30%;  
     	padding: 5px 15px;
     	font-family: Arial, Helvetica, sans-serif;
     	font-size:14px;
@@ -29,7 +29,7 @@
     }
     #tfselect{
     	width: 100px;  height: 40px; position: absolute;
-    right: 81%;  top: 30%;  
+    right: 74%;  top: 30%;  
     	padding: 5px 15px;
     	font-family: Arial, Helvetica, sans-serif;
     	font-size:14px;
@@ -41,7 +41,7 @@
     }
 
     .tfbutton {
-    	height: 42px;  position: absolute;  right: 30%;  top: 30%; 
+    	height: 42px;  position: absolute;  right: 23%;  top: 30%; 
     	padding: 5px 15px;
     	font-family: Arial, Helvetica, sans-serif;
     	font-size:25px;
@@ -70,9 +70,8 @@
     .tfclear{
     	clear:both;
     }
-    div.hidden{
-        display: none;
-    }
+
+
   <div id="tfheader">
   <form id="tfnewsearch" method="post" action= /user_skills/search>
   <select id="tfselect" name="select">
@@ -81,10 +80,12 @@
   </select> 
  
   <input type="text" class="tftextinput" name="searchBy" size="21" maxlength="120">
-  <input type="submit" id="button" value="search" class="tfbutton">
+  <input type="submit" id="button" onclick="showhide()" value="search" class="tfbutton">
   </form>
   <div class="tfclear"></div>
   </div>
+
+
 
 
 
