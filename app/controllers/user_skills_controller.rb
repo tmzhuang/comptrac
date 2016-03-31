@@ -101,9 +101,10 @@ def search_user
   end
   def search_skill
 	@skillSearch= params[:searchBy]
-	@id=Skill.select("id").find_by name: params[:searchBy]
-	@searchedUsers=UserSkill.where(skill_id: @id).select("user_id","competence")
-  render :action => :search_skill
+	@skillId=Skill.select("id").find_by name: params[:searchBy]
+	@searchedUsers=UserSkill.where(skill_id: @skillId).select("user_id","competence")
+  
+  render :action => :search_skill_assessor
 	
 
   end
