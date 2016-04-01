@@ -16,3 +16,6 @@
 package.box
 *.orig
 /config/secrets.yml
+*.orig
+/bin/
+.byebug_history
