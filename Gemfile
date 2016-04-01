@@ -57,8 +57,6 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   gem 'pry'
-  #gem 'dependency_grapher', :github => 'tmzhuang/dependency_grapher', :branch => 'master'
-  gem 'dependency_grapher', path: './lib/dependency_grapher'
 end
 
 group :development do
