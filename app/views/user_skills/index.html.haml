@@ -2,11 +2,15 @@
 %table
   %thead
     %tr
+      %th Name
+      %th Skill
       %th Competence
       %th{:colspan => "3"}
   %tbody
     - @user_skills.each do |user_skill|
       %tr
+        %td= user_skill.user.name
+        %td= user_skill.skill.name
         %td= user_skill.competence
         %td= link_to 'Show', user_skill
         %td= link_to 'Edit', edit_user_skill_path(user_skill)
