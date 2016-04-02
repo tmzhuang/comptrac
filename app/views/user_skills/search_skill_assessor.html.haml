@@ -1,0 +1,46 @@
+%p#notice= notice
+%p
+%center
+  %font{:size => "5"}
+    %strong
+      = @skillSearch
+= link_to 'Back', user_skills_path
+%table{:style => "width:100%"}
+  %tr
+    %th
+      %p
+        %strong User
+    %th
+      %p
+        %strong Competence
+  - @searchedUsers.each do |user|
+    %tr
+      %td
+        = User.find_by(id: user.user_id).name
+      %td
+        = user.competence
+      %td
+        %button.button{:onclick => "endorse(#{user.user_id})", :type => "button"}
+          %img{:height => "30", :src => "#{asset_path( 'endorse.gif' )}", :width => "30"}/
+:javascript
+  function endorse(competence)
+       {
+    console.log(userid);
+    userskill=UserSkill.find_by(user_id: userid, skill_id: skillid)
+    competence=userskill.competence	
+    competence= competence +1
+    userskill.save
+    console.log(competence);
+  
+       }
+:css
+  .button {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+  width= 30;
+  height= 30;
+  }
