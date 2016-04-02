@@ -1,12 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
   resources :skills
+  resources :user_skills
   resources :users do
-    scope module: :users do
-      resources :skills
-    end
+    #scope module: :users do
+      #resources :skills
+    #end
   end
 
+  post 'user_skills/search'	
 
   # Callback finish url
   #match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup

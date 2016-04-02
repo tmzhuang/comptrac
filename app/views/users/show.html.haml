@@ -15,14 +15,14 @@
     %th
       %p
         %strong Competence
-  - @skills.each do |skill|
+  - @user_skills.each do |user_skill|
     %tr
       %td
-        = skill.name
+        = user_skill.skill.name
       %td
-        = skill.category
+        = user_skill.skill.category
       %td
-        = UserSkill.find_by(skill_id: skill.id , user_id: @user.id).competence
+        = user_skill.competence
 
 %br/
 %br/

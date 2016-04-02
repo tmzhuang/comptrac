@@ -87,7 +87,7 @@ class UsersController < ApplicationController
     end
 
     def set_skills
-      @skills = @user.skills
+      @user_skills = @user.user_skills
     end
 
     def set_all_skills
