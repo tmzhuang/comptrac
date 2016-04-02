@@ -13,22 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-#gem 'therubyracer'
-gem 'haml'
-gem 'haml-rails'
-
-# bootstrapping
-gem 'bootstrap-sass'
-gem 'font-awesome-sass'
-
-# User authentication gems
-gem 'bcrypt'
-gem 'devise'
-gem 'omniauth'
-gem 'omniauth-github'
-gem 'omniauth-facebook'
-gem 'omniauth-identity'
-gem 'jquery-turbolinks'
+# gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -40,6 +25,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # pagination
 gem 'will_paginate', '~> 3.0'
+gem 'haml'
+gem 'haml-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

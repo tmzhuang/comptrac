@@ -12,8 +12,5 @@
 !/log/.keep
 /tmp
 /.vagrant
-/lib/dependency_grapher
 package.box
-/config/secrets.yml
 *.orig
-.byebug_history

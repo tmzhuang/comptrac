@@ -225,6 +225,7 @@ DEPENDENCIES
   font-awesome-sass
   haml
   haml-rails
+  html2haml
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks

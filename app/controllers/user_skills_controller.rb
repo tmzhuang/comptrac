@@ -1,5 +1,7 @@
 class UserSkillsController < ApplicationController
   before_action :set_user_skill, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :verify_authenticity_token  
+ # skip_callback(:search ,:before, :set_user_skill)
 
   # GET /user_skills
   # GET /user_skills.json
@@ -20,6 +22,18 @@ class UserSkillsController < ApplicationController
   # GET /user_skills/1/edit
   def edit
   end
+
+
+def search
+  if params[:select]== "users"
+  search_user
+  else
+  search_skill
+  end
+end
+	
+  
+	
 
   # POST /user_skills
   # POST /user_skills.json
@@ -64,13 +78,37 @@ class UserSkillsController < ApplicationController
   end
 
   private
+
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user_skill
+      if params[:id]!="search"
       @user_skill = UserSkill.find(params[:id])
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_skill_params
       params.require(:user_skill).permit(:competence, :user_id, :skill_id)
     end
+def search_user
+    @id=User.select("id").find_by name: params[:searchBy]
+    @user = User.find(@id) 
+  @skills = @user.skills
+     #respond_to do |format|
+      #format.html { redirect_to "user_skills/search_user", notice: 'User was successfully shown.' }
+      #format.json { head :no_content }
+    #end
+  render :action => :search_user
+  end
+  def search_skill
+	@skillSearch= params[:searchBy]
+	@skillId=Skill.select("id").find_by name: params[:searchBy]
+	@searchedUsers=UserSkill.where(skill_id: @skillId).select("user_id","competence")
+  
+  render :action => :search_skill_assessor
+	
+
+  end
+
 end
