@@ -8,7 +8,6 @@ class ActionController::TestCase
 end
 
 class ActiveSupport::TestCase
-  include DependencyGrapher::TestHelpers
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 end
