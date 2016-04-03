@@ -31,6 +31,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string   :unlock_token # Only if unlock strategy is :email or :both
       t.datetime :locked_at
 
+      ## Admin
+      t.boolean :admin, default: false, null: false
 
       # Uncomment below if timestamps were not included in your original model.
       # t.timestamps null: false
