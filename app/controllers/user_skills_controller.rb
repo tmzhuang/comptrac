@@ -32,7 +32,13 @@ def search
   end
 end
 	
-  
+def endorse
+    @userskill=UserSkill.find_by(user_id: params[:endorseUser], skill_id: params[:endorseSkill])
+    @competence=@userskill.competence	
+    @userskill.competence= @competence +1
+    @userskill.save
+  refresh_search_skill
+end 
 	
 
   # POST /user_skills
@@ -102,7 +108,15 @@ def search_user
   def search_skill
 	@skillSearch= params[:searchBy]
 	@skillId=Skill.select("id").find_by name: params[:searchBy]
-	@searchedUsers=UserSkill.where(skill_id: @skillId).select("user_id","competence")
+	@searchedUsers=UserSkill.where(skill_id: @skillId).select("user_id","skill_id","competence")
+  
+  render :action => :search_skill_assessor
+  end
+  def refresh_search_skill
+        
+	@skillId=params[:endorseSkill]
+  @skillSearch= Skill.find(@skillId).name
+	@searchedUsers=UserSkill.where(skill_id: @skillId).select("user_id","skill_id","competence")
   
   render :action => :search_skill_assessor
 	

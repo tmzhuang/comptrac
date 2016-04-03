@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   root 'user_skills#index'
 
   post 'user_skills/search'
-  get  'user_skills/search_user'	
+  post 'user_skills/endorse'
+  
 	
 
   # Example of regular route:
