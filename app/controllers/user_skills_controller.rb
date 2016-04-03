@@ -32,14 +32,21 @@ def search
   end
 end
 	
-def endorse
+def endorseskill
     @userskill=UserSkill.find_by(user_id: params[:endorseUser], skill_id: params[:endorseSkill])
     @competence=@userskill.competence	
     @userskill.competence= @competence +1
     @userskill.save
-  refresh_search_skill
-end 
-	
+    refresh_search_skill
+end
+
+  def endorseuser
+    @userskill=UserSkill.find_by(user_id: params[:endorseUser], skill_id: params[:endorseSkill])
+    @competence=@userskill.competence
+    @userskill.competence= @competence +1
+    @userskill.save
+    refresh_search_user
+  end
 
   # POST /user_skills
   # POST /user_skills.json
@@ -95,32 +102,42 @@ end
     def user_skill_params
       params.require(:user_skill).permit(:competence)
     end
-def search_user
+
+  def search_user
     @id=User.select("id").find_by name: params[:searchBy]
     @user = User.find(@id) 
-  @skills = @user.skills
+    @skills = @user.skills
      #respond_to do |format|
       #format.html { redirect_to "user_skills/search_user", notice: 'User was successfully shown.' }
       #format.json { head :no_content }
     #end
-  render :action => :search_user
+    render :action => :search_user
   end
-  def search_skill
-	@skillSearch= params[:searchBy]
-	@skillId=Skill.select("id").find_by name: params[:searchBy]
-	@searchedUsers=UserSkill.where(skill_id: @skillId).select("user_id","skill_id","competence")
-  
-  render :action => :search_skill_assessor
-  end
-  def refresh_search_skill
-        
-	@skillId=params[:endorseSkill]
-  @skillSearch= Skill.find(@skillId).name
-	@searchedUsers=UserSkill.where(skill_id: @skillId).select("user_id","skill_id","competence")
-  
-  render :action => :search_skill_assessor
-	
 
+  def search_skill
+	  @skillSearch= params[:searchBy]
+	  @skillId=Skill.select("id").find_by name: params[:searchBy]
+	  @searchedUsers=UserSkill.where(skill_id: @skillId).select("user_id","skill_id","competence")
+  
+    render :action => :search_skill_assessor
+  end
+
+  def refresh_search_skill
+    @skillId=params[:endorseSkill]
+    @skillSearch= Skill.find(@skillId).name
+    @searchedUsers=UserSkill.where(skill_id: @skillId).select("user_id","skill_id","competence")
+    render :action => :search_skill_assessor
+  end
+
+  def refresh_search_user
+    @id=params[:endorseUser]
+    @user = User.find(@id)
+    @skills = @user.skills
+    #respond_to do |format|
+    #format.html { redirect_to "user_skills/search_user", notice: 'User was successfully shown.' }
+    #format.json { head :no_content }
+    #end
+    render :action => :search_user
   end
 
 end

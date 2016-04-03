@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   root 'user_skills#index'
 
   post 'user_skills/search'
-  post 'user_skills/endorse'
+  post 'user_skills/endorseskill'
+  post 'user_skills/endorseuser'
   
 	
 
