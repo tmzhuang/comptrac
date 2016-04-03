@@ -19,7 +19,7 @@
       %td
         = user.competence
       %td
-        %form#tfnewsearch{:action => "/user_skills/endorse?endorseUser=#{user.user_id}&endorseSkill=#{user.skill_id}", :method => "post"}
+        %form#tfnewsearch{:action => "/user_skills/endorseskill?endorseUser=#{user.user_id}&endorseSkill=#{user.skill_id}", :method => "post"}
           %input#button{:type => "image", :height => "30", :src => "#{asset_path( 'endorse.gif' )}", :width => "30"}
            
 :css

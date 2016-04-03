@@ -23,6 +23,10 @@
         = skill.category
       %td
         = UserSkill.find_by(skill_id: skill.id , user_id: @user.id).competence
+      %td
+        %form#tfnewsearch{:action => "/user_skills/endorseuser?endorseUser=#{@user.id}&endorseSkill=#{skill.id}", :method => "post"}
+          %input#button{:type => "image", :height => "30", :src => "#{asset_path( 'endorse.gif' )}", :width => "30"}
 
 
   = link_to 'Back', user_skills_path 
+
