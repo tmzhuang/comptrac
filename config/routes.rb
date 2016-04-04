@@ -2,11 +2,9 @@ Rails.application.routes.draw do
   #devise_for :users, path: '/users', :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations' }
   devise_for :users, module: "users"
   resources :skills
-  #resources :user_skills
+  resources :user_skills
   resources :users do
-    scope module: :users do
-      resources :skills
-    end
+
   end
 
   post 'user_skills/search'	
@@ -22,6 +20,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#landing'
 
+  get '*path' => redirect('/')
 
   post 'user_skills/search'
   post 'user_skills/endorseskill'
