@@ -1,4 +1,3 @@
-%p#notice= notice
 %p
 %center
   %font{:size => "5"}
@@ -20,21 +19,12 @@
       %td
         = user.competence
       %td
-        %button.button{:onclick => "endorse(#{user.user_id})", :type => "button"}
-          %img{:height => "30", :src => "#{asset_path( 'endorse.gif' )}", :width => "30"}/
-:javascript
-  function endorse(competence)
-       {
-    console.log(userid);
-    userskill=UserSkill.find_by(user_id: userid, skill_id: skillid)
-    competence=userskill.competence	
-    competence= competence +1
-    userskill.save
-    console.log(competence);
-  
-       }
+        %form#tfnewsearch{:action => "/user_skills/endorseskill?endorseUser=#{user.user_id}&endorseSkill=#{user.skill_id}", :method => "post"}
+          %input#button{:type => "image", :height => "30", :src => "#{asset_path( 'endorse.gif' )}", :width => "30"}
+           
 :css
-  .button {
+  input[type="submit"] {
+
     background-color: Transparent;
     background-repeat:no-repeat;
     border: none;
