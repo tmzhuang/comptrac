@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   devise_for :users, module: "users"
   resources :skills
   resources :user_skills
-  resources :users do
-
-  end
+  #resources :users do
+   #   scope module: :users do
+    #      resources :skills
+     # end
+  #end
 
   post 'user_skills/search'	
 
