@@ -4,7 +4,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   # GET /resource/sign_up
   def new
-    redirect_to "http://www.facebook.com"
     super
     # Grant admin priviledges if this is the only account
     if User.count == 0

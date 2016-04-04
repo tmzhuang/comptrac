@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :authenticate_user!
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+  rescue_from ActionController::RoutingError, with: :routing_error
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -28,8 +29,16 @@ class ApplicationController < ActionController::Base
 
   def user_not_authorized
     flash[:alert] = "You are not authorized to perform this action."
+    direct_to_root
+  end
+
+  def routing_error
+    flash[:alert] = "The page you requested could not be found."
+    direct_to_root
+  end
+
+  def direct_to_root
     self.response_body = nil
     redirect_to(request.referrer || root_path)
-    #root_path
   end
 end
