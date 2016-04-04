@@ -23,6 +23,11 @@ Rails.application.routes.draw do
   root 'pages#landing'
 
 
+  post 'user_skills/search'
+  post 'user_skills/endorseskill'
+  post 'user_skills/endorseuser'
+  
+	
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
