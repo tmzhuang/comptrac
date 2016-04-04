@@ -31,6 +31,7 @@ gem 'omniauth-identity'
 gem 'jquery-turbolinks'
 
 # User authorization
+gem 'rolify'
 gem 'pundit'
 
 # Use jquery as the JavaScript library
