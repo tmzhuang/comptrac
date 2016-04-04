@@ -1,16 +1,21 @@
-class User::RegistrationsController < Devise::RegistrationsController
-# before_filter :configure_sign_up_params, only: [:create]
-# before_filter :configure_account_update_params, only: [:update]
+class Users::RegistrationsController < Devise::RegistrationsController
+  # before_filter :configure_sign_up_params, only: [:create]
+  # before_filter :configure_account_update_params, only: [:update]
 
   # GET /resource/sign_up
-  # def new
-  #   super
-  # end
+  def new
+    redirect_to "http://www.facebook.com"
+    super
+    # Grant admin priviledges if this is the only account
+    if User.count == 0
+      @user.add_role :admin
+    end
+  end
 
   # POST /resource
-  # def create
-  #   super
-  # end
+  def create
+    super
+  end
 
   # GET /resource/edit
   # def edit

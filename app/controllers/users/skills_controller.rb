@@ -1,5 +1,6 @@
 class Users::SkillsController < ApplicationController
   before_action :set_user_skill, only: [:show, :edit, :update, :destroy]
+  before_action :skip_authorization
 
   # GET /user/skills
   # GET /user/skills.json
