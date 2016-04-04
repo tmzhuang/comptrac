@@ -3,12 +3,12 @@ class UsersController < ApplicationController
   before_action :set_skills, only: [:show, :edit, :update, :destroy, :add_skills]
   before_action :set_all_skills, only: [:new, :add_skills, :edit]
   before_action :set_user_skills, only: [:new, :add_skills, :edit]
-  prepend_before_action :new_user, only: [:new]
 
   # GET /users
   # GET /users.json
   def index
     @users = User.all
+    authorize User
   end
 
   # GET /users/1
@@ -18,6 +18,7 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
+    @user = User.new
   end
 
   # GET /users/add_skill
@@ -33,6 +34,12 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
     @user = User.new(user_params)
+    
+    # Grant admin priviledges if this is the only account
+    if User.count == 0
+      @user.add_role :admin
+    end
+
     params[:user][:skill_ids].each do |id|
       if !id.empty?
         @user.skills << Skill.find(id)
@@ -102,8 +109,8 @@ class UsersController < ApplicationController
      @user_competence=UserSkill.select("competence").find_by skill_id: 1, user_id: 1
     end
 
-    def new_user
-      @user = User.new
+    def authorize_user
+      authorize User
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

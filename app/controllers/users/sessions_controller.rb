@@ -1,15 +1,19 @@
-class User::SessionsController < Devise::SessionsController
-   before_filter :configure_sign_in_params, only: [:create]
+class Users::SessionsController < Devise::SessionsController
+  before_filter :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
-  # def new
-  #   super
-  # end
+  def new
+    super
+  end
 
   # POST /resource/sign_in
   def create
     super
     render :text => request.env['rack.auth'].inspect
+    # Grant admin priviledges if this is the only account
+    if User.count == 1
+      @user.add_role :admin
+    end
   end
 
   # DELETE /resource/sign_out

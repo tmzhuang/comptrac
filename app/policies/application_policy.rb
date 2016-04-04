@@ -7,11 +7,12 @@ class ApplicationPolicy
   end
 
   def index?
-    false
+    @user.has_role? :admin
   end
 
   def show?
-    scope.where(:id => record.id).exists?
+    #scope.where(:id => record.id).exists?
+    true
   end
 
   def create?

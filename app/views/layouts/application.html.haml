@@ -7,12 +7,12 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    -#.container-fluid
-      -#- flash.each do |type, message|
-        -#.alert{ class: "alert-#{type} fade in" }
-          -#-#%button.close{"data-dismiss" => "alert"} ×
-          -#= message
-    -#= yield :top_content
+    .container-fluid
+      - flash.each do |type, message|
+        .alert{ class: "alert-#{type} fade in" }
+          -#%button.close{"data-dismiss" => "alert"} ×
+          = message
+    = yield :top_content
     .container
       %nav.navbar.navbar-default{:role => "navigation"}
         .navbar-header
@@ -26,6 +26,8 @@
               -#%a{:href => "#about"} Left
           %ul.nav.navbar-nav.navbar-right
             - if user_signed_in?
+              - if current_user.has_role? :admin
+                %li NICE!
               %li.dropdown
                 %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
                   = current_user.name
