@@ -27,6 +27,20 @@ class User < ActiveRecord::Base
     skills.include?(skill)
   end
 
+  def is_admin?
+    has_role? :admin
+  end
+
+  def is_assessor?(skill)
+    has_role? :assessor, skill
+  end
+
+  def is_assessor_of_any?
+    roles.any? do |role|
+      role[:name] == "assessor" && role[:resource_type] == "Skill"
+    end
+  end
+
   def register(name)
     RegisterUser.call(name)
   end
