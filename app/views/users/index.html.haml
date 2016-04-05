@@ -1,5 +1,8 @@
 %body
   %h2 Users
+  = form_tag users_path, method: 'get', id: "users_search" do
+    = text_field_tag :search, params[:search]
+    = submit_tag "Search", name: nil
   .tbl-header
     %table
       %thead
@@ -11,9 +14,8 @@
         - @users.each do |user|
           %tr
             %td= link_to user.name, user
-            %td= link_to 'Show', user 
-            %td= link_to 'Edit', edit_user_path(user) if current_user.is_admin?
-            %td= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
-            %td= link_to 'Add Skills', new_user_skill_path(user)
-  %br/
-  = link_to 'New User', new_user_registration_path
+            - if current_user.is_admin?
+              - if current_user.is_admin?
+                %td= link_to 'Edit', edit_user_path(user) if current_user.is_admin?
+                %td= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }
+                %td= link_to 'Add Skills', new_user_skill_path(user)

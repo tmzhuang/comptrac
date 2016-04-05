@@ -19,3 +19,10 @@
 //= require_tree .
 
 $(".alert" ).fadeOut(3000);
+
+$(function() {
+  $("#skills_search input").keyup(function() {
+    $.get($("#skills_search").attr("action"), $("#skills_search").serialize(), null, "script");
+    return false;
+  });
+});

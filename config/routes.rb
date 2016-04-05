@@ -9,8 +9,6 @@ Rails.application.routes.draw do
     end
   end
 
-  post 'user_skills/search'	
-
   # Callback finish url
   #match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
   # Callback url
@@ -20,8 +18,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  #root 'pages#index'
-  root 'test#index'
+  root 'pages#index'
+  #root 'test#index'
 
   get '*path' => redirect('/')
 
