@@ -18,11 +18,14 @@
 @import 'font-awesome';
 @import 'bootstrap-social';
 
-
 .alert-alert {
   @extend .alert-warning;
 }
 
 .alert-notice {
   @extend .alert-info;
+}
+
+.table.thead.tr.th {
+  width: "300";
 }

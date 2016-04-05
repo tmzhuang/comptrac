@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  include Searchable
+
   rolify
   TEMP_EMAIL_PREFIX = 'change@me'
   TEMP_EMAIL_REGEX = /\Achange@me/
@@ -39,10 +41,6 @@ class User < ActiveRecord::Base
     roles.any? do |role|
       role[:name] == "assessor" && role[:resource_type] == "Skill"
     end
-  end
-
-  def register(name)
-    RegisterUser.call(name)
   end
 
   def self.find_for_oauth(auth, signed_in_resource = nil)
