@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :skills
   #devise_for :users, path: '/users', :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations' }
   devise_for :users, module: "users"
   resources :skills
