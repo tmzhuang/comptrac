@@ -9,8 +9,8 @@ two:
   category: MyString
 
 ruby:
-  name: ruby
-  category: language
+  name: Java
+  category: OO
 
 postgres:
   id: 2

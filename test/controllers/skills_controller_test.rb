@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SkillsControllerTest < ActionController::TestCase
   setup do
-    @skill = skills(:one)
+    @skill = skills(:Java)
   end
 
   test "should get index" do
@@ -13,7 +13,7 @@ class SkillsControllerTest < ActionController::TestCase
 
   test "should get new" do
     get :new
-    assert_response :success
+   assert_not_nil @skill
   end
 
   test "should create skill" do
