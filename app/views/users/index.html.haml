@@ -3,13 +3,13 @@
   = form_tag  :controller => :users, :action => :search, method: 'post'do
     = text_field_tag :search, params[:search]
     = submit_tag "Search", name: nil
-  .tbl-header
-    %table
+  
+    %table.container
       %thead
         %tr
           %th{:colspan => "3"}
-  .tbl-content
-    %table
+  
+    %table.container
       %tbody
         - @users.each do |user|
           %tr
