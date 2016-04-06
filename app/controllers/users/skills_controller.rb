@@ -25,6 +25,9 @@ class Users::SkillsController < ApplicationController
   # POST /user/skills
   # POST /user/skills.json
   def create
+      #byebug
+    
+    params[:user_skill][:user_id] = current_user.id if current_user
     @user_skill = UserSkill.new(user_skill_params)
 
     respond_to do |format|
@@ -33,7 +36,7 @@ class Users::SkillsController < ApplicationController
         format.json { render :show, status: :created, location: @user_skill }
       else
         format.html { render :new }
-        format.json { render json: @user_skill.errors, status: :unprocessable_entity }
+        format.json { render json: @useuser_skill_paramsr_skill.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -43,7 +46,7 @@ class Users::SkillsController < ApplicationController
   def update
     respond_to do |format|
       if @user_skill.update(user_skill_params)
-        format.html { redirect_to '/user_skills', notice: 'Skill was successfully updated.' }
+        format.html { redirect_to '/user_skuser_skill_paramsills', notice: 'Skill was successfully updated.' }
         format.json { render :show, status: :ok, location: @user_skill }
       else
         format.html { render :edit }
@@ -70,6 +73,7 @@ class Users::SkillsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_skill_params
+       
       accessible = [ :user_id, :skill_id, :id ] # extend with your own params
       params.fetch(:user_skill, {}).permit(accessible)
     end

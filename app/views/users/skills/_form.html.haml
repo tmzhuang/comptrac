@@ -7,8 +7,7 @@
       %ul
         - @user_skill.errors.full_messages.each do |message|
           %li= message
-  .field
-    = f.select :user_id, User.all.collect { |user| [ user.name, user.id ] }
+
   .field
     = f.select :skill_id, Skill.all.collect { |skill| [ skill.name, skill.id ] }
   .field
