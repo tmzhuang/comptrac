@@ -1,6 +1,6 @@
 %body
   %h2 Users
-  = form_tag users_path, method: 'get', id: "users_search" do
+  = form_tag  :controller => :users, :action => :search, method: 'post'do
     = text_field_tag :search, params[:search]
     = submit_tag "Search", name: nil
   .tbl-header

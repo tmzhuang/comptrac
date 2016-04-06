@@ -23,9 +23,10 @@ Rails.application.routes.draw do
 
   get '*path' => redirect('/')
 
-  post 'user_skills/search'
-  post 'user_skills/endorseskill'
-  post 'user_skills/endorseuser'
+  post 'skills/search'
+  post 'users/search'
+  post 'skills/endorseskill'
+  post 'users/endorseuser'
   
 	
 
