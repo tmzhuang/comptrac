@@ -1,11 +1,31 @@
 class SkillsController < ApplicationController
   before_action :set_skill, only: [:show, :edit, :update, :destroy]
+  skip_before_filter :verify_authenticity_token
 
   # GET /skills
   # GET /skills.json
   def index
     @search = params[:search]
     @skills = Skill.search(params[:search])
+    
+  end
+  
+  def search
+  search_skill
+  end 
+  
+  def endorseskill 
+  
+    @userskill=UserSkill.find_by(user_id: params[:endorseUser], skill_id: params[:endorseSkill])
+    @target_user = User.find(params[:endorseUser])
+    @target_skill = Skill.find(params[:endorseSkill])
+    @competence=@userskill.competence
+    @userskill.competence= @competence +1
+    if @userskill.competence == 5
+        @target_user.add_role :assessor, @target_skill
+    end
+    @userskill.save
+    refresh_search_skill
   end
 
   # GET /skills/1
@@ -72,4 +92,24 @@ class SkillsController < ApplicationController
     def skill_params
       params.require(:skill).permit(:name, :category, :search)
     end
+    def search_skill
+    @skillSearch= params[:search]
+    @skillId=Skill.select("id").find_by name: params[:search]
+    if @skillId
+      @searchedUsers=UserSkill.where(skill_id: @skillId).select("user_id","skill_id","competence")
+      render :action => :search_skill_assessor
+    else
+      respond_to do |format|
+        format.html { redirect_to skills_path, notice: "Skill does not exist" }
+        format.json { head :no_content }
+      end
+    end
+  end
+
+  def refresh_search_skill
+    @skillId=params[:endorseSkill]
+    @skillSearch= Skill.find(@skillId).name
+    @searchedUsers=UserSkill.where(skill_id: @skillId).select("user_id","skill_id","competence")
+    render :action => :search_skill_assessor
+  end
 end

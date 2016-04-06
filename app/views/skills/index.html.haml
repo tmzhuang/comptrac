@@ -1,5 +1,5 @@
 %h2 Listing Skills
-= form_tag skills_path, method: 'get', id: "skills_search" do
+= form_tag :controller => :skills, :action => :search, method: 'post' do
   = text_field_tag :search, params[:search]
   = submit_tag "Search", name: nil
 %br/
