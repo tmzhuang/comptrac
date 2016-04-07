@@ -21,7 +21,7 @@ class SkillsController < ApplicationController
     @target_skill = Skill.find(params[:endorseSkill])
     @competence=@userskill.competence
     @userskill.competence= @competence +1
-    if @userskill.competence == 5
+    if @userskill.competence >= 5
         @target_user.add_role :assessor, @target_skill
     end
     @userskill.save

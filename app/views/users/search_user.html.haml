@@ -24,8 +24,10 @@
       %td
         = UserSkill.find_by(skill_id: skill.id , user_id: @user.id).competence
       %td
-        %form#tfnewsearch{:action => "/users/endorseuser?endorseUser=#{@user.id}&endorseSkill=#{skill.id}", :method => "post"}
-          %input#button{:type => "image", :height => "30", :src => "#{asset_path( 'endorse.gif' )}", :width => "30"}
+        - if current_user.has_role? :assessor, skill
+
+          %form#tfnewsearch{:action => "/users/endorseuser?endorseUser=#{@user.id}&endorseSkill=#{skill.id}", :method => "post"}
+            %input#button{:type => "image", :height => "30", :src => "#{asset_path( 'endorse.gif' )}", :width => "30"}
 
 
   = link_to 'Back', users_path 
