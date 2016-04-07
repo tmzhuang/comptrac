@@ -12,23 +12,20 @@ A user with a student or assessor role can perfom the following activities
 - remove skills from his/her profile
 - search for users by skills
 - view skills of a user
-- add skills to his/her learning plan
 
 A user with an assessor role can
-- assess a skill and update the competence level of the us
+- assess a skill and update the competence level of the user
 
 Possible types of Skills 
 - programming languages
 
 Competence Level
-- Novice
-- intermediate
-- advanced / assessor
+- if level > 5, user will be assigned an assessor role
 	
 
 Sprint 1
 --------
-- Research how to create a database for Acyclic graph for Skill dependencies
+- Research how to create a database with many to many relationships
 - Design class overview (MVC)
 - Web page to create, edit, update and delete users
 - Web page to create, edit, update and delete Skills
@@ -48,6 +45,6 @@ Sprint 3
 - Search page to search:
 	- users by skills
 	- skills by users
-- Setup user roles (Assessor, Admin)
+- Setup user roles (Assessor, Admin, student)
 - Endorse feature to upvote skills
-- Unit testing
+
