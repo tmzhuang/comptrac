@@ -1,0 +1,38 @@
+%p
+%center
+  %font{:size => "5"}
+    %strong
+      = @skillSearch
+= link_to 'Back', user_skills_path
+%table{:style => "width:100%"}
+  %tr
+    %th
+      %p
+        %strong User
+    %th
+      %p
+        %strong Competence
+  - @searchedUsers.each do |user|
+    %tr
+      %td
+        = User.find_by(id: user.user_id).name
+      %td
+        = user.competence
+
+      %td
+        -if current_user.has_role? :assessor, Skill.find(user.skill_id)
+          %form#tfnewsearch{:action => "/user_skills/endorseskill?endorseUser=#{user.user_id}&endorseSkill=#{user.skill_id}", :method => "post"}
+            %input#button{:type => "image", :height => "30", :src => "#{asset_path( 'endorse.gif' )}", :width => "30"}
+
+  :css
+    input[type="submit"] {
+
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    width= 30;
+    height= 30;
+    }

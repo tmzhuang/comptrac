@@ -1,0 +1,21 @@
+%p#notice= notice
+%p
+%center
+  %font{:size => "5"}
+    %strong
+      = @skillSearch
+= link_to 'Back', user_skills_path
+%table{:style => "width:100%"}
+  %tr
+    %th
+      %p
+        %strong Skill
+    %th
+      %p
+        %strong Competence
+  - @searchedUsers.each do |user|
+    %tr
+      %td
+        = User.find_by(id: user.user_id).name
+      %td
+        = user.competence

@@ -13,7 +13,26 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
+#gem 'therubyracer'
+gem 'haml'
+gem 'haml-rails'
+
+# bootstrapping
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+
+# User authentication gems
+gem 'bcrypt'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-github'
+gem 'omniauth-facebook'
+gem 'omniauth-identity'
+gem 'jquery-turbolinks'
+
+# User authorization
+gem 'rolify'
+gem 'pundit'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -38,6 +57,10 @@ gem 'will_paginate', '~> 3.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry'
+  gem 'minitest-reporters'
+  gem 'guard'
+  gem 'mocha'
 end
 
 group :development do
@@ -46,5 +69,7 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'execjs'
+  
 end
 

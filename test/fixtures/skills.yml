@@ -7,3 +7,12 @@ one:
 two:
   name: MyString
   category: MyString
+
+ruby:
+  name: Java
+  category: OO
+
+postgres:
+  id: 2
+  name: postgres
+  category: database

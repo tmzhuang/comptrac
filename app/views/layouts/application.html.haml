@@ -1,0 +1,47 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Comptrac
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    .container-fluid
+      - flash.each do |type, message|
+        .alert{ class: "alert-#{type} fade in" }
+          -#%button.close{"data-dismiss" => "alert"} ×
+          = message
+    = yield :top_content
+    .container
+      %nav.navbar.navbar-default{:role => "navigation"}
+        .navbar-header
+          -#- link = "/users/#{current_user.id}
+          %a.navbar-brand{:href => "#"} comptrac
+        .navbar-collapse.collapse
+          -#%ul.nav.navbar-nav.navbar-left
+            -#%li
+              -#%a{:href => "#"} Left
+            -#%li
+              -#%a{:href => "#about"} Left
+          %ul.nav.navbar-nav.navbar-right
+            - if user_signed_in?
+              %li= link_to 'Skills', skills_path
+              %li= link_to 'Users', users_path
+              %li.dropdown
+                %a.dropdown-toggle{"data-toggle" => "dropdown", :href => "#"}
+                  = current_user.name
+                  %span.caret
+                    %ul.dropdown-menu{:role => "menu"}
+                      %li= link_to 'Profile', user_path(current_user)
+                      %li= link_to 'Sign Out', destroy_user_session_path, method: :delete
+            - else
+              %li= link_to 'Sign In', new_user_session_path
+              %li= link_to 'Sign Up', new_user_registration_path
+      -#.navbar-header
+        -##navbar
+          -#%ul.nav.navbar-nav
+            -#%li= link_to 'comptrac', root_path, class: 'navbar-brand'
+    .container
+      %h2= @header
+      = yield

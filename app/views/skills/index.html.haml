@@ -1,0 +1,9 @@
+%h2 Listing Skills
+= form_tag :controller => :skills, :action => :search, method: 'post' do
+  = text_field_tag :search, params[:search]
+  = submit_tag "Search", name: nil
+%br/
+.products 
+  = render 'skills'
+- if current_user.is_admin?
+  = link_to 'New Skill', new_skill_path

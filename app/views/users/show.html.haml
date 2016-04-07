@@ -1,0 +1,38 @@
+%center
+  %font{:size => "5"}
+    %strong
+      = @user.name
+    -if current_user.is_admin?
+      %p Admin
+%br/
+-if current_user.is_assessor_of_any?
+  %p You are authorized to assess users in the following skills:
+  %ul
+  -GetUserAssessibleSkills.call(current_user).each do  |skill|
+    %li= link_to skill.name, skill
+%br/
+%table{:style => "width:100%"}
+  %tr
+    %th
+      %p
+        %strong Skill
+    %th
+      %p
+        %strong Category
+    %th
+      %p
+        %strong Competence
+  - @user_skills.each do |user_skill|
+    %tr
+      %td
+        = user_skill.skill.name
+      %td
+        = user_skill.skill.category
+      %td
+        = user_skill.competence
+
+%br/
+%br/
+-if current_user == @user
+  =link_to "Add skills", new_user_skill_path(current_user), class: "btn btn-primary"
+

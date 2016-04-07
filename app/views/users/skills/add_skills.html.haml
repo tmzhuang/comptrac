@@ -1,0 +1,5 @@
+= form_for @user do |f|
+  = render partial: 'add_skills_form', locals: { form: f }
+.actions{ class: "btn btn-primary" }
+  = f.submit
+= link_to 'Back', users_path

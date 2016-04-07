@@ -1,7 +1,13 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+## Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+tianming:
+  name: tianming
+  email: abstract.wolf@gmail.com
 
-two:
-  name: MyString
+monisha:
+  name: monisha
+  email: moni.sind@gmail.com
+
+ali:
+  name: ali
+  email: ali@gmail.com

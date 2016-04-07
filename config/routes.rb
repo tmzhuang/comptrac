@@ -1,24 +1,35 @@
 Rails.application.routes.draw do
-  scope :users, :controller => :users do
-    get ':id/add_skills' => :add_skills, as: :add_skills
-    get ':id/add_powers' => :add_powers, as: :add_powers
-
-  end
-  resources :user_skills
   resources :skills
+  #devise_for :users, path: '/users', :controllers => { omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations' }
+  devise_for :users, module: "users"
+  resources :skills
+  #resources :user_skills
   resources :users do
-    member do
-      get :skills
+    scope module: :users do
+      resources :skills
     end
   end
 
-  # The priority is based upon order of creation: first created -> highest priority.
+  # Callback finish url
+  #match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
+  # Callback url
+  match '/auth/:provider/callback', :to => 'sessions#create', via: [:get, :post]
+
+  # The priority is based upon order of creation: first creased -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'users#index'
+  root 'pages#index'
+  #root 'test#index'
 
+  get '*path' => redirect('/')
 
+  post 'skills/search'
+  post 'users/search'
+  post 'skills/endorseskill'
+  post 'users/endorseuser'
+  
+	
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

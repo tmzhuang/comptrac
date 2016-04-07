@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SkillsControllerTest < ActionController::TestCase
   setup do
-    @skill = skills(:one)
+    @skill = skills(:Java)
   end
 
   test "should get index" do
@@ -13,12 +13,12 @@ class SkillsControllerTest < ActionController::TestCase
 
   test "should get new" do
     get :new
-    assert_response :success
+   assert_not_nil @skill
   end
 
   test "should create skill" do
     assert_difference('Skill.count') do
-      post :create, skill: { category: @skill.category, name: @skill.name }
+      post :create, skill: {  }
     end
 
     assert_redirected_to skill_path(assigns(:skill))
@@ -35,7 +35,7 @@ class SkillsControllerTest < ActionController::TestCase
   end
 
   test "should update skill" do
-    patch :update, id: @skill, skill: { category: @skill.category, name: @skill.name }
+    patch :update, id: @skill, skill: {  }
     assert_redirected_to skill_path(assigns(:skill))
   end
 
