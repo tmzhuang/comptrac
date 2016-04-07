@@ -1,0 +1,9 @@
+-if @user == current_user
+  -if current_user.is_admin?
+    %center Admin
+  %br/
+  -if current_user.is_assessor_of_any?
+    %p You are authorized to assess users in the following skills:
+    %ul
+    -GetUserAssessibleSkills.call(current_user).each do  |skill|
+      %li= link_to skill.name, skill
