@@ -20,9 +20,9 @@
         = user.competence
 
       %td
-        -if current_user.has_role? :assessor, Skill.find(user.skill_id)
-          %form#tfnewsearch{:action => "/skills/endorseskill?endorseUser=#{user.user_id}&endorseSkill=#{user.skill_id}", :method => "post"}
-            %input#button{:type => "image", :height => "30", :src => "#{asset_path( 'endorse.gif' )}", :width => "30"}
+
+        %form#tfnewsearch{:action => "/skills/endorseskill?endorseUser=#{user.user_id}&endorseSkill=#{user.skill_id}", :method => "post"}
+          %input#button{:type => "image", :height => "30", :src => "#{asset_path( 'endorse.gif' )}", :width => "30"}
 
   :css
     input[type="submit"] {
