@@ -2,14 +2,8 @@
   %font{:size => "5"}
     %strong
       = @user.name
-    -if current_user.is_admin?
-      %p Admin
 %br/
--if current_user.is_assessor_of_any?
-  %p You are authorized to assess users in the following skills:
-  %ul
-  -GetUserAssessibleSkills.call(current_user).each do  |skill|
-    %li= link_to skill.name, skill
+= render 'roles', :locals => {:user => @user}
 %br/
 %table{:style => "width:100%"}
   %tr
