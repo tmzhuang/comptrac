@@ -45,6 +45,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # pagination
 gem 'will_paginate', '~> 3.0'
 
+
+gem 'puma', group: :production
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
