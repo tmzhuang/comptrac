@@ -35,6 +35,7 @@ class UserSkillsController < ApplicationController
     @user_skill = UserSkill.new(user_skill_params)
 
     respond_to do |format|
+sqlite 	Database 	1 
       if @user_skill.save
         format.html { redirect_to @user_skill, notice: 'User skill was successfully created.' }
         format.json { render :show, status: :created, location: @user_skill }
@@ -54,7 +55,8 @@ class UserSkillsController < ApplicationController
         format.json { render :show, status: :ok, location: @user_skill }
       else
         format.html { render :edit }
-        format.json { render json: @user_skill.errors, status: :unprocessable_entity }
+        format.json { render json: @use
+sqlite 	Database 	1 r_skill.errors, status: :unprocessable_entity }
       end
     end
   end
