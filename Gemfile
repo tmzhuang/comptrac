@@ -22,8 +22,7 @@ gem 'coffee-rails', '~> 4.1.0'
 #gem 'therubyracer'
 gem 'haml'
 gem 'haml-rails'
-gem 'puma'
-gem 'rails_12factor'
+
 
 # bootstrapping
 gem 'bootstrap-sass'
@@ -75,4 +74,6 @@ group :development do
 gem 'web-console', '~> 2.0'
 
 end
+gem 'rails_12factor', group: :production
+
 
